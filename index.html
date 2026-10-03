@@ -523,35 +523,6 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
 @media(max-width:900px){#mobileControlEditor{padding:12px!important}#mobileControlEditor .mobile-editor-layout{grid-template-columns:180px minmax(260px,1fr) 190px;grid-template-rows:minmax(0,1fr) 220px;gap:8px!important}#mobileControlEditor .mobile-editor-header{height:58px}}
 @media(max-width:700px){#mobileControlEditor{padding:8px!important;overflow:auto!important}#mobileControlEditor .mobile-editor-header{height:auto;min-height:52px;padding-bottom:6px}#mobileControlEditor .mobile-editor-header h2{font-size:16px!important}#mobileControlEditor .mobile-editor-header .sub{display:none}#mobileControlEditor .mobile-editor-status{font-size:7px;white-space:normal;max-width:42%}#mobileControlEditor .mobile-editor-layout{grid-template-columns:1fr;grid-template-rows:48vh auto auto auto;height:auto!important;min-height:0!important}#mobileControlEditor .mobile-editor-stage{grid-column:1!important;grid-row:1!important;min-height:260px!important}#mobileControlEditor .mobile-editor-left{grid-column:1!important;grid-row:2!important;max-height:210px;height:210px!important}#mobileControlEditor .mobile-editor-options{grid-column:1!important;grid-row:3!important;max-height:230px;height:230px!important}#mobileControlEditor .mobile-editor-actions-panel{grid-column:1!important;grid-row:4!important;height:auto!important}#mobileControlEditor .mobile-editor-controls-list{height:calc(100% - 48px)!important}#mobileControlEditor .mobile-editor-actions{flex-direction:row!important;flex-wrap:wrap!important}#mobileControlEditor .mobile-editor-actions button{flex:1 1 30%;min-height:44px!important}}
 
-/* =========================================================
-   ONLINE CO-OP — lobby full screen
-   ========================================================= */
-#onlinePanel{pointer-events:auto!important;position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;max-width:none!important;max-height:none!important;transform:none!important;left:0!important;top:0!important;border:0!important;border-radius:0!important;display:none;z-index:12000!important;overflow:auto!important;padding:30px clamp(18px,4vw,70px)!important;background:radial-gradient(circle at 70% 15%,rgba(66,100,180,.18),transparent 34%),linear-gradient(145deg,#050914,#0a1326 52%,#050811)!important}
-.online-shell{width:min(1180px,100%);margin:0 auto;min-height:calc(100vh - 60px);display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}.online-main,.online-side{border:1px solid #3f557c;border-radius:22px;background:linear-gradient(145deg,rgba(13,23,43,.97),rgba(6,11,23,.98));box-shadow:0 25px 80px #000a,inset 0 1px #ffffff10}.online-main{padding:30px;display:flex;flex-direction:column}.online-side{padding:22px;display:flex;flex-direction:column}.online-kicker{font-size:10px;letter-spacing:.22em;color:#72ffd0;font-weight:950;margin-bottom:8px}.online-title{font-size:clamp(28px,4vw,52px);letter-spacing:.08em;font-weight:950;margin:0}.online-sub{color:#8498bd;font-size:12px;margin:8px 0 24px}.online-profile{display:grid;grid-template-columns:1fr auto;gap:9px}.online-input{width:100%;padding:13px 14px;border:1px solid #3e5276;border-radius:11px;background:#080f1f;color:#eef4ff;outline:none;font:inherit}.online-input:focus{border-color:#82a5e5;box-shadow:0 0 0 3px #7195df18}.online-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.online-action{min-height:52px;font-size:13px}.online-room{margin-top:18px;padding:18px;border:1px solid #344a70;border-radius:16px;background:#080f1ddd;text-align:center}.online-room-label{font-size:9px;letter-spacing:.18em;color:#7287ad}.online-code{font-size:34px;letter-spacing:.22em;font-weight:1000;color:#dce7ff;margin:7px 0 3px}.online-status{min-height:20px;margin:12px 0;color:#9fb0cf;font-size:12px}.online-status.ok{color:#79efc6}.online-status.bad{color:#ff879b}.online-players{margin-top:10px;padding:10px;border:1px solid #293d5e;border-radius:12px;background:#070d1a;min-height:110px;color:#cdd8eb;line-height:1.8;font-size:12px}.online-side h3{margin:0 0 4px;font-size:16px}.online-side .small{margin-bottom:10px}.online-chat-log{flex:1;min-height:280px;max-height:calc(100vh - 300px);overflow:auto;padding:9px;border:1px solid #293d5e;border-radius:13px;background:#060b16}.online-chat-line{padding:5px 6px;font-size:11px;line-height:1.35}.online-chat-line b{color:#83a9ff;margin-right:7px}.online-chat-line span{color:#d0d9ea}.online-chat-send{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:9px}.online-bottom{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto;padding-top:18px}.online-bottom button{flex:1 1 170px}.online-ready{border-color:#57d7b2;background:#12332f}.online-danger{border-color:#7d4354;background:#2a141d;color:#ffb0bd}.online-back{border-color:#4d638c}.online-note{font-size:10px;color:#687c9f;line-height:1.5;margin-top:10px}
-@media(max-width:850px){.online-shell{grid-template-columns:1fr;min-height:auto}.online-main,.online-side{min-height:0}.online-chat-log{max-height:38vh;min-height:180px}.online-actions{grid-template-columns:1fr}.online-panel{padding:15px!important}.online-profile{grid-template-columns:1fr}.online-bottom{margin-top:12px}}
-
-/* =========================================================
-   ONLINE 2.0 — lobby e acesso
-   ========================================================= */
-  display:none;
-  position:fixed;
-  left:50%;
-  bottom:22px;
-  transform:translateX(-50%);
-  z-index:10050;
-  min-width:250px;
-  padding:13px 24px;
-  border:1px solid #55d6b0;
-  border-radius:12px;
-  background:linear-gradient(135deg,#123b3b,#10252f);
-  color:#8ff5d2;
-  font-weight:900;
-  font-size:14px;
-  letter-spacing:.04em;
-  box-shadow:0 10px 30px #0009,0 0 24px #3ee2b22b;
-  cursor:pointer;
-  pointer-events:auto;
-}
 </style>
 
 
@@ -630,7 +601,7 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
 }
 
 #menu.abyss-menu:after{
-  content:"ABYSSAL LEGACY  •  v6.4"!important;
+  content:"ABYSSAL LEGACY  •  v6.5"!important;
   position:absolute!important;
   right:6.1vw!important;
   bottom:4.1vh!important;
@@ -839,6 +810,56 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
   color:#7182a5!important;
   font-size:9px!important;
   line-height:1!important;
+}
+
+
+/* Placa no espaço onde ficava o modo online */
+#menu .menu-maintenance{
+  position:absolute!important;
+  left:63.8vw!important;
+  top:31.1vh!important;
+  width:26.2vw!important;
+  min-width:340px!important;
+  max-width:360px!important;
+  height:77px!important;
+  box-sizing:border-box!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:13px!important;
+  padding:11px 15px!important;
+  margin:0!important;
+  border-radius:15px!important;
+  overflow:hidden!important;
+  border:1px solid #6b5540!important;
+  border-left:3px solid #d6a85d!important;
+  background:linear-gradient(110deg,#292116,#17130e)!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.035)!important;
+  color:#e8d3ad!important;
+}
+#menu .menu-maintenance>span{
+  width:42px!important;height:42px!important;flex:0 0 42px!important;
+  display:grid!important;place-items:center!important;border-radius:11px!important;
+  background:#ffffff07!important;font-size:18px!important;
+}
+#menu .menu-maintenance b{
+  display:block!important;color:#f3dfbd!important;font-size:13px!important;
+  line-height:1!important;letter-spacing:.07em!important;
+}
+#menu .menu-maintenance small{
+  display:block!important;margin-top:5px!important;color:#a99778!important;
+  font-size:8px!important;line-height:1!important;letter-spacing:.03em!important;
+}
+#menu .menu-maintenance>i{
+  margin-left:auto!important;font-size:7px!important;font-style:normal!important;
+  letter-spacing:.1em!important;color:#d6a85d!important;border:1px solid #735b39!important;
+  padding:5px 7px!important;border-radius:999px!important;white-space:nowrap!important;
+}
+@media(max-width:800px){
+  #menu .menu-maintenance{left:59vw!important;top:33vh!important;width:min(350px,32vw)!important;min-width:0!important}
+}
+@media(max-width:520px){
+  #menu .menu-maintenance{left:8vw!important;top:34vh!important;width:84vw!important;max-width:none!important;min-width:0!important}
+  #menu .menu-maintenance>i{display:none!important}
 }
 
 /* Online */
@@ -1483,6 +1504,240 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
 .char-skin-btn{margin-top:10px;min-width:180px;padding:10px 16px;border:1px solid #6b5630;border-radius:12px;background:linear-gradient(135deg,#2a2110,#151a28);color:#ffe18a;font-weight:900;letter-spacing:.08em;font-size:12px;cursor:pointer}
 </style>
 
+
+<style>
+@keyframes menuPassPulse{0%,100%{transform:translateY(0) scale(1);filter:brightness(1)}50%{transform:translateY(-1px) scale(1.025);filter:brightness(1.12)}}
+@media (max-width:600px){.menu-pass-highlight{font-size:14px!important;letter-spacing:.16em!important;padding:6px 12px!important}}
+
+<style id="menu-caca-central">
+/* CAÇA AO PRÊMIO: separado do título e centralizado no menu */
+#menu .menu-pass-highlight{
+  position:relative!important;
+  left:auto!important;
+  top:auto!important;
+  transform:none!important;
+  display:block!important;
+  width:max-content!important;
+  max-width:calc(100% - 32px)!important;
+  margin:28px auto 22px!important;
+  z-index:20!important;
+  white-space:nowrap!important;
+  box-sizing:border-box;
+  font-size:18px;
+  font-weight:1000;
+  letter-spacing:.24em;
+  color:#ffe28a;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:0 0 8px rgba(255,215,106,.75),0 0 22px rgba(255,170,45,.42);
+  padding:8px 18px;
+  border:1px solid rgba(255,215,106,.55);
+  border-radius:10px;
+  background:linear-gradient(180deg,rgba(255,215,106,.13),rgba(255,170,45,.045));
+  box-shadow:0 0 18px rgba(255,190,60,.16),inset 0 0 18px rgba(255,215,106,.06);
+  animation:menuPassPulse 2.4s ease-in-out infinite;
+}
+@media(max-width:650px){
+  #menu .menu-pass-highlight{font-size:14px!important;letter-spacing:.16em!important;padding:7px 12px!important;margin:22px auto 18px!important;max-width:88vw!important;white-space:normal!important;text-align:center!important}
+}
+</style>
+</style>
+
+<style id="menu-layout-modelo">
+/* ===== MENU PRINCIPAL — composição inspirada no layout de referência ===== */
+#menu.abyss-menu{overflow:hidden!important}
+#menu .menu-brand{
+  position:absolute!important;
+  left:4.5vw!important;
+  top:7.5vh!important;
+  margin:0!important;
+  z-index:10!important;
+  display:block!important;
+  width:330px!important;
+}
+#menu .menu-mark,#menu .menu-eyebrow,#menu .menu-subtitle{display:none!important}
+#menu .menu-brand h1{
+  margin:0!important;
+  font-size:clamp(42px,4.5vw,62px)!important;
+  line-height:.94!important;
+  letter-spacing:.055em!important;
+  text-align:left!important;
+}
+#menu .menu-layout{position:absolute!important;inset:0!important;display:block!important;z-index:4!important}
+#menu .menu-actions{position:absolute!important;inset:0!important}
+
+/* CAÇA AO PRÊMIO: bloco independente, longe do título */
+#menu .menu-pass-highlight{
+  position:absolute!important;
+  left:28vw!important;
+  top:22.8vh!important;
+  width:31.5vw!important;
+  max-width:none!important;
+  height:51px!important;
+  margin:0!important;
+  box-sizing:border-box!important;
+  display:grid!important;
+  place-items:center!important;
+  transform:none!important;
+  z-index:20!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+  font-size:clamp(18px,1.8vw,27px)!important;
+  font-weight:1000!important;
+  letter-spacing:.22em!important;
+  color:#fff0a0!important;
+  text-shadow:0 0 9px rgba(255,225,100,.95),0 0 28px rgba(255,180,40,.55)!important;
+  border:1px solid rgba(255,215,90,.72)!important;
+  border-radius:11px!important;
+  background:linear-gradient(180deg,rgba(255,214,80,.16),rgba(255,170,35,.055))!important;
+  box-shadow:0 0 26px rgba(255,190,55,.22),inset 0 0 22px rgba(255,220,100,.07)!important;
+  animation:menuPassPulse 2.4s ease-in-out infinite!important;
+}
+
+/* dificuldade: topo central */
+#menu .menu-status-card{
+  left:41vw!important;
+  top:2.2vh!important;
+  width:20.5vw!important;
+  min-width:250px!important;
+  height:44px!important;
+  padding:0 15px!important;
+  box-sizing:border-box!important;
+}
+
+/* coluna direita */
+#menu .menu-primary{
+  left:64.8vw!important;
+  top:12.7vh!important;
+  width:26.3vw!important;
+  min-width:340px!important;
+  max-width:360px!important;
+  height:77px!important;
+}
+#menu .menu-maintenance{
+  left:63.8vw!important;
+  top:30.8vh!important;
+  width:26.2vw!important;
+  min-width:340px!important;
+  max-width:360px!important;
+  height:77px!important;
+}
+#menu .menu-action{
+  left:65vw!important;
+  right:auto!important;
+  top:47.8vh!important;
+  width:23.5vw!important;
+  min-width:300px!important;
+  max-width:322px!important;
+  height:80px!important;
+}
+
+/* progresso à esquerda */
+#menu .menu-grid{
+  left:6vw!important;
+  top:35.8vh!important;
+  bottom:auto!important;
+  width:26.4vw!important;
+  min-width:350px!important;
+  max-width:360px!important;
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:10px!important;
+}
+#menu .menu-tile{min-height:74px!important}
+#menu .menu-updates{
+  left:6vw!important;
+  top:86.5vh!important;
+  bottom:auto!important;
+  width:26.4vw!important;
+  min-width:350px!important;
+  max-width:360px!important;
+}
+
+/* seed / estatísticas: canto inferior direito */
+#menu .seed-card{
+  right:10.8vw!important;
+  left:auto!important;
+  top:61.3vh!important;
+  width:24.2vw!important;
+  min-width:310px!important;
+  max-width:330px!important;
+}
+#menu .menu-info-card:first-child{display:none!important}
+
+#menu .game-version{right:6vw!important;bottom:2.5vh!important}
+
+@media(max-width:900px){
+  #menu .menu-brand{left:4vw!important;top:6vh!important;width:290px!important}
+  #menu .menu-brand h1{font-size:clamp(36px,6vw,52px)!important}
+  #menu .menu-pass-highlight{left:27vw!important;top:23vh!important;width:32vw!important}
+  #menu .menu-primary{left:59vw!important;top:13vh!important;width:32vw!important;min-width:0!important}
+  #menu .menu-maintenance{left:58vw!important;top:32vh!important;width:33vw!important;min-width:0!important}
+  #menu .menu-action{left:60vw!important;top:50vh!important;width:28vw!important;min-width:0!important}
+  #menu .menu-grid{left:5vw!important;top:38vh!important;width:38vw!important;min-width:0!important}
+  #menu .menu-updates{left:5vw!important;top:88vh!important;width:38vw!important;min-width:0!important}
+  #menu .seed-card{right:5vw!important;top:67vh!important;width:30vw!important;min-width:0!important}
+  #menu .menu-status-card{left:40vw!important;top:2vh!important;width:22vw!important;min-width:0!important}
+}
+@media(max-width:650px){
+  #menu.abyss-menu{overflow:auto!important}
+  #menu .menu-brand{left:7vw!important;top:4vh!important;width:86vw!important}
+  #menu .menu-brand h1{font-size:31px!important}
+  #menu .menu-pass-highlight{left:8vw!important;top:18vh!important;width:84vw!important;height:48px!important;font-size:15px!important}
+  #menu .menu-primary,#menu .menu-maintenance,#menu .menu-action{left:8vw!important;width:84vw!important;max-width:none!important;min-width:0!important}
+  #menu .menu-primary{top:29vh!important}
+  #menu .menu-maintenance{top:42vh!important}
+  #menu .menu-action{top:55vh!important}
+  #menu .menu-grid{left:8vw!important;top:68vh!important;width:84vw!important;min-width:0!important;max-width:none!important}
+  #menu .menu-updates{left:8vw!important;top:92vh!important;width:84vw!important;min-width:0!important;max-width:none!important}
+  #menu .menu-info{display:none!important}
+  #menu .menu-status-card{left:8vw!important;top:11vh!important;width:84vw!important}
+  #menu .game-version{right:6vw!important;bottom:2vh!important}
+}
+</style>
+
+
+<style id="restore-seed-card">
+/* Restaurar o painel de SEED que o redesenho do menu estava ocultando. */
+#menu .menu-info-card.seed-card{
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:absolute!important;
+  right:10.8vw!important;
+  left:auto!important;
+  top:61.3vh!important;
+  width:24.2vw!important;
+  min-width:310px!important;
+  max-width:330px!important;
+  z-index:20!important;
+}
+#menu .seed-card .seed-custom{
+  display:flex!important;
+  position:static!important;
+  width:100%!important;
+}
+@media(max-width:900px){
+  #menu .menu-info-card.seed-card{
+    right:5vw!important;
+    top:67vh!important;
+    width:30vw!important;
+    min-width:0!important;
+  }
+}
+@media(max-width:650px){
+  #menu .menu-info-card.seed-card{
+    display:block!important;
+    right:8vw!important;
+    left:8vw!important;
+    top:80vh!important;
+    width:84vw!important;
+    min-width:0!important;
+    max-width:none!important;
+  }
+}
+</style>
+
 </head>
 <body>
 <canvas id="game"></canvas>
@@ -1492,25 +1747,23 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
 
 
 
-  <div class="online-screen-footer">
-  </div>
 </div>
 
 </div>
 <div id="ui">
   <div id="menu" class="panel center abyss-menu">
 <div class="menu-atmosphere"><span></span><span></span><span></span></div>
-<div class="menu-brand"><div class="menu-mark">A</div><div><div class="menu-eyebrow">WELCOME TO THE ABYSS</div><h1>ABYSSAL <em>LEGACY</em></h1><div class="menu-pass-title" style="display:block!important;margin-top:8px;font-size:13px;font-weight:950;letter-spacing:.18em;color:#ffd76a;text-transform:uppercase;text-shadow:0 0 14px rgba(255,215,106,.35)">caça ao prêmio</div><div class="menu-subtitle">ACTION ROGUELIKE <i>•</i> BULLET HELL</div></div></div>
+<div class="menu-brand"><div class="menu-mark">A</div><div><div class="menu-eyebrow">WELCOME TO THE ABYSS</div><h1>ABYSSAL <em>LEGACY</em></h1><div class="menu-subtitle">ACTION ROGUELIKE <i>•</i> BULLET HELL</div></div></div><div class="menu-pass-title menu-pass-highlight">✦ CAÇA AO PRÊMIO ✦</div>
 <div class="menu-layout"><section class="menu-actions"><div class="menu-section-label">JOGAR</div>
 <button id="start" class="menu-primary"><span>▶</span><div><b>INICIAR RUN</b><small>Entre no Abismo e comece uma nova jornada</small></div></button>
-<button id="onlineMenuBtn" class="menu-online"><span>◈</span><div><b>MODO ONLINE</b><small>Crie uma sala ou entre com código</small></div><i>ONLINE</i></button>
+<div class="menu-maintenance" aria-label="Modo online em manutenção"><span>🔧</span><div><b>EM MANUTENÇÃO</b><small>MODO ONLINE TEMPORARIAMENTE INDISPONÍVEL</small></div><i>EM BREVE</i></div>
 <button id="goldenRushBtn" class="menu-action"><span>✦</span><div><b>GOLDENRUSH</b><small>Uma corrida especial por recompensas</small></div></button>
 <div class="menu-section-label secondary">PROGRESSÃO</div><div class="menu-grid">
 <button id="how" class="menu-tile"><strong>✧</strong><b>ÁRVORE</b><small>Habilidades</small></button><button id="achievementsBtn" class="menu-tile"><strong>◆</strong><b>CONQUISTAS</b><small>Desafios</small></button><button id="battlePassBtn" class="menu-tile"><strong>⚔</strong><b>PASSE</b><small>Caça ao Prêmio</small></button><button id="inventoryBtn" class="menu-tile"><strong>🎒</strong><b>INVENTÁRIO</b><small>Rastros</small></button><button id="difficultyBtn" class="menu-tile"><strong>◈</strong><b>DIFICULDADE</b><small>Normal</small></button><button id="optionsBtn" class="menu-tile"><strong>⚙</strong><b>OPÇÕES</b><small>Configurações</small></button><button id="shopBtn" class="menu-tile"><strong>🛒</strong><b>LOJA</b><small>Classes & Skins</small></button></div>
 <button id="updatesBtn" class="menu-updates"><span>▣</span> ATUALIZAÇÕES <small>Notas da versão</small></button></section>
 <aside class="menu-info"><div class="menu-info-card seed-card"><div class="info-kicker">RUN PERSONALIZADA</div><div class="seed-current">SEED <b id="seedText"></b></div><div class="seed-custom"><input id="seedInput" type="text" maxlength="64" placeholder="Digite sua seed..."><button id="applySeed">USAR</button></div><div class="seed-stats"><div><span>💠 FRAGMENTOS</span><b id="metaText">0</b></div><div><span>🏆 VITÓRIAS</span><b id="winsText">0</b></div></div></div>
 <div class="menu-status-card"><span>DIFICULDADE</span><b id="diffMenu">NORMAL</b></div></aside></div>
-<p class="small" id="plusStatus" style="display:none"></p><p class="small" id="goldenRushStatus" style="display:none"></p><div class="game-version">v6.4</div></div>
+<p class="small" id="plusStatus" style="display:none"></p><p class="small" id="goldenRushStatus" style="display:none"></p><div class="game-version">v6.5</div></div>
 <div id="goldenLockPanel" class="panel center" style="display:none;pointer-events:auto;min-width:min(420px,90vw);max-width:92vw">
     <div style="font-size:48px;margin-bottom:8px">🔒🟡</div>
     <h2 style="color:#ffd45c">GOLDENRUSH BLOQUEADO</h2>
@@ -1580,7 +1833,20 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
     <h2>📰 ATUALIZAÇÕES</h2>
     <p class="sub" style="text-align:center">Histórico de novidades, melhorias e correções do ABYSSAL LEGACY.</p>
     <div class="updates-list">
-      <article class="update-entry"><div class="update-head"><span class="update-version">v6.4 • SORTE OU NADA!</span><span class="update-date">01/10/2026</span></div><div><span class="update-tag">SORTE OU NADA</span><span class="update-tag">CASSINO</span><span class="update-tag">APOSTADOR</span><span class="update-tag">NOVOS DESAFIOS</span></div><p>Uma atualização temática focada em sorte, risco, recompensas e decisões arriscadas. Entre no cassino, aposte tudo e descubra até onde a sua sorte consegue levar você.</p><ul><li>Adicionado o tema <b>SORTE OU NADA!</b>, trazendo uma nova identidade para a atualização.</li><li>Adicionadas máquinas de cassino que podem aparecer durante as dungeons, com custo variável conforme o progresso da run.</li><li>Adicionada a classe <b>APOSTADOR</b>, com 120 HP, identidade visual própria e habilidades baseadas em sorte e risco.</li><li>Adicionada a habilidade primária do APOSTADOR, usando a máquina/roleta para gerar recompensas ou efeitos negativos aleatórios.</li><li>Adicionada a habilidade secundária <b>SORTE GRANDE</b>, aumentando a sorte e dobrando recompensas durante seu período de efeito.</li><li>Adicionados desbloqueios relacionados ao cassino e suporte para liberar o APOSTADOR pelo sistema de progresso.</li><li>Adicionadas salas secretas, incluindo uma chance extremamente rara de encontrar um atalho capaz de pular toda a dungeon.</li><li>Adicionadas salas de desafio com limite de tempo e novas recompensas para runs mais arriscadas.</li><li>Adicionados NPCs de missões, contratos e objetivos extras durante as runs.</li><li>Adicionados baús que podem se transformar em <b>mimics</b>, criando uma chance de transformar uma recompensa aparentemente segura em uma ameaça.</li><li>Adicionado escalonamento de vida dos chefes no multiplayer conforme a quantidade de jogadores na partida.</li><li>Adicionado suporte para recompensas e progressão individuais no modo cooperativo, mantendo os recursos de cada jogador separados.</li><li>Adicionada a condição de desbloqueio do <b>GOLDENRUSH</b> ao alcançar <b>15.000 moedas em uma única run</b>; ao atingir a meta, o modo é liberado sem interromper a run.</li><li>Adicionada a tela de bloqueio do GOLDENRUSH com a meta de 15.000 moedas e indicação clara do requisito.</li><li>Adicionados efeitos visuais e sonoros para a roleta, incluindo animação de giro, brilho, ponteiro e feedback de resultado.</li><li>Adicionada entrada de seed com suporte a letras, números e símbolos para gerar runs personalizadas.</li><li>Adicionados objetivos e conquistas relacionados à sorte, cassino, moedas, mimics, cooperação e recompensas especiais.</li><li>Reforçado o sistema de recompensas da atualização para valorizar decisões de alto risco e runs focadas em acumular recursos.</li></ul></article><article class="update-entry"><div class="update-head"><span class="update-version">v6.3 • CONQUISTAS REFORÇADAS</span><span class="update-date">01/10/2026</span></div><div><span class="update-tag">CONQUISTAS</span><span class="update-tag">MENU</span><span class="update-tag">MISSÕES</span><span class="update-tag">PROGRESSÃO</span></div><p>Grande reformulação do sistema de conquistas, com novos objetivos, nomes mais interessantes e uma apresentação visual renovada.</p><ul><li>As conquistas de abates foram renomeadas para dar mais personalidade e variedade ao progresso.</li><li>Metade das antigas conquistas focadas em moedas foi substituída por objetivos de progressão, desbloqueios e outros desafios.</li><li>As antigas conquistas de explorador foram removidas e substituídas por objetivos diferentes.</li><li>O antigo Caçador de Chefes foi dividido em uma conquista própria para cada chefe, com trocadilhos relacionados aos nomes dos chefes.</li><li>As conquistas de sequência de abates foram renomeadas e reformuladas.</li><li>As conquistas de apostador foram substituídas por novos objetivos.</li><li>Os antigos desafios de tempo foram substituídos por novas conquistas.</li><li>As conquistas de missão receberam novos nomes e uma identidade própria.</li><li>O sistema continua com 100 conquistas e recompensas em fragmentos, distribuídas por níveis de dificuldade.</li><li>O menu de conquistas foi redesenhado com cards, progresso visual, melhor organização e apresentação mais detalhada.</li><li>Conquistas concluídas agora recebem uma moldura dourada brilhante, destacando visualmente as conquistas já obtidas.</li><li>Conquistas concluídas também recebem destaque visual de conclusão para facilitar a identificação.</li></ul></article><article class="update-entry">
+      <article class="update-entry">
+        <div class="update-head"><span class="update-version">v6.5 • CAÇA AO PRÊMIO</span><span class="update-date">03/10/2026</span></div>
+        <div><span class="update-tag">PROGRESSÃO</span><span class="update-tag">LOJA</span><span class="update-tag">PERSONALIZAÇÃO</span><span class="update-tag">MENU</span></div>
+        <p>Uma atualização focada em progressão, personalização e identidade visual, trazendo novos sistemas e uma nova apresentação para o ABYSSAL LEGACY.</p>
+        <ul>
+          <li><b>Passe de Batalha:</b> foi adicionado um sistema de progressão por níveis, com recompensas desbloqueadas conforme o jogador ganha experiência e avança pelo passe.</li>
+          <li><b>Classe do Caçador:</b> foi adicionada uma nova classe jogável, trazendo uma nova opção de personagem para as runs e ampliando a variedade de estilos de jogo.</li>
+          <li><b>Loja:</b> o menu agora conta com uma área dedicada à loja, onde o jogador pode acessar conteúdos e itens de progressão e personalização.</li>
+          <li><b>Fragmentos como moeda:</b> os <b>Fragmentos continuam com esse mesmo nome</b>, mas passam a ser apresentados claramente como a moeda utilizada para compras, recompensas e sistemas de progressão.</li>
+          <li><b>Skins:</b> foi adicionada a possibilidade de personalizar visualmente o personagem através de skins, separando aparência de desempenho.</li>
+          <li><b>Rastros:</b> foram adicionados rastros visuais para personalizar o efeito deixado pelo personagem durante a movimentação.</li>
+          <li><b>Tema novo do menu:</b> o menu principal recebeu uma nova identidade visual, com uma composição mais organizada, contraste maior, elementos destacados e uma apresentação mais moderna do ABYSSAL LEGACY.</li>
+        </ul>
+      </article><article class="update-entry"><div class="update-head"><span class="update-version">v6.4 • SORTE OU NADA!</span><span class="update-date">01/10/2026</span></div><div><span class="update-tag">SORTE OU NADA</span><span class="update-tag">CASSINO</span><span class="update-tag">APOSTADOR</span><span class="update-tag">NOVOS DESAFIOS</span></div><p>Uma atualização temática focada em sorte, risco, recompensas e decisões arriscadas. Entre no cassino, aposte tudo e descubra até onde a sua sorte consegue levar você.</p><ul><li>Adicionado o tema <b>SORTE OU NADA!</b>, trazendo uma nova identidade para a atualização.</li><li>Adicionadas máquinas de cassino que podem aparecer durante as dungeons, com custo variável conforme o progresso da run.</li><li>Adicionada a classe <b>APOSTADOR</b>, com 120 HP, identidade visual própria e habilidades baseadas em sorte e risco.</li><li>Adicionada a habilidade primária do APOSTADOR, usando a máquina/roleta para gerar recompensas ou efeitos negativos aleatórios.</li><li>Adicionada a habilidade secundária <b>SORTE GRANDE</b>, aumentando a sorte e dobrando recompensas durante seu período de efeito.</li><li>Adicionados desbloqueios relacionados ao cassino e suporte para liberar o APOSTADOR pelo sistema de progresso.</li><li>Adicionadas salas secretas, incluindo uma chance extremamente rara de encontrar um atalho capaz de pular toda a dungeon.</li><li>Adicionadas salas de desafio com limite de tempo e novas recompensas para runs mais arriscadas.</li><li>Adicionados NPCs de missões, contratos e objetivos extras durante as runs.</li><li>Adicionados baús que podem se transformar em <b>mimics</b>, criando uma chance de transformar uma recompensa aparentemente segura em uma ameaça.</li><li>Adicionado escalonamento de vida dos chefes no multiplayer conforme a quantidade de jogadores na partida.</li><li>Adicionado suporte para recompensas e progressão individuais no modo cooperativo, mantendo os recursos de cada jogador separados.</li><li>Adicionada a condição de desbloqueio do <b>GOLDENRUSH</b> ao alcançar <b>15.000 moedas em uma única run</b>; ao atingir a meta, o modo é liberado sem interromper a run.</li><li>Adicionada a tela de bloqueio do GOLDENRUSH com a meta de 15.000 moedas e indicação clara do requisito.</li><li>Adicionados efeitos visuais e sonoros para a roleta, incluindo animação de giro, brilho, ponteiro e feedback de resultado.</li><li>Adicionada entrada de seed com suporte a letras, números e símbolos para gerar runs personalizadas.</li><li>Adicionados objetivos e conquistas relacionados à sorte, cassino, moedas, mimics, cooperação e recompensas especiais.</li><li>Reforçado o sistema de recompensas da atualização para valorizar decisões de alto risco e runs focadas em acumular recursos.</li></ul></article><article class="update-entry"><div class="update-head"><span class="update-version">v6.3 • CONQUISTAS REFORÇADAS</span><span class="update-date">01/10/2026</span></div><div><span class="update-tag">CONQUISTAS</span><span class="update-tag">MENU</span><span class="update-tag">MISSÕES</span><span class="update-tag">PROGRESSÃO</span></div><p>Grande reformulação do sistema de conquistas, com novos objetivos, nomes mais interessantes e uma apresentação visual renovada.</p><ul><li>As conquistas de abates foram renomeadas para dar mais personalidade e variedade ao progresso.</li><li>Metade das antigas conquistas focadas em moedas foi substituída por objetivos de progressão, desbloqueios e outros desafios.</li><li>As antigas conquistas de explorador foram removidas e substituídas por objetivos diferentes.</li><li>O antigo Caçador de Chefes foi dividido em uma conquista própria para cada chefe, com trocadilhos relacionados aos nomes dos chefes.</li><li>As conquistas de sequência de abates foram renomeadas e reformuladas.</li><li>As conquistas de apostador foram substituídas por novos objetivos.</li><li>Os antigos desafios de tempo foram substituídos por novas conquistas.</li><li>As conquistas de missão receberam novos nomes e uma identidade própria.</li><li>O sistema continua com 100 conquistas e recompensas em fragmentos, distribuídas por níveis de dificuldade.</li><li>O menu de conquistas foi redesenhado com cards, progresso visual, melhor organização e apresentação mais detalhada.</li><li>Conquistas concluídas agora recebem uma moldura dourada brilhante, destacando visualmente as conquistas já obtidas.</li><li>Conquistas concluídas também recebem destaque visual de conclusão para facilitar a identificação.</li></ul></article><article class="update-entry">
         <div class="update-head"><span class="update-version">v5.1 • CELULAR</span><span class="update-date">30/09/2026</span></div>
         <div><span class="update-tag">CELULAR</span><span class="update-tag">CONTROLES</span><span class="update-tag">RESPONSIVO</span></div>
         <p>Novas opções e melhorias para jogar ABYSSAL LEGACY em telas e resoluções diferentes.</p>
@@ -1615,45 +1881,7 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
   </div>
 
   <div id="achievementsPanel" class="panel center" style="display:none;max-width:1120px;width:min(94vw,1120px);max-height:90vh;overflow:auto;pointer-events:auto"><h2>🏆 CONQUISTAS</h2><p class="sub">Complete desafios do Abismo e transforme cada feito em fragmentos permanentes.</p><div id="achievementSummary" class="small" style="margin:8px 0 14px"></div><div id="achievementList" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:12px;text-align:left"></div><button id="backAchievements">VOLTAR AO MENU</button></div>
-
-  <div id="onlinePanel" class="panel" aria-hidden="true">
-    <div class="online-shell">
-      <section class="online-main">
-        <div class="online-kicker">ABYSSAL LEGACY • CO-OP ONLINE</div>
-        <h2 class="online-title">MODO ONLINE</h2>
-        <p class="online-sub">Crie uma sala ou entre usando o código. O host mantém inimigos, drops e mundo compartilhados; seus recursos continuam individuais.</p>
-        <div class="online-profile">
-          <input id="onlineName" class="online-input" maxlength="18" autocomplete="off" placeholder="Seu nome de jogador">
-          <button id="onlineNameSave" type="button">✓ USAR NOME</button>
-        </div>
-        <div class="online-actions">
-          <button id="onlineCreateBtn" class="online-action">＋ CRIAR SALA</button>
-          <button id="onlineJoinBtn" class="online-action">↪ ENTRAR NA SALA</button>
-        </div>
-        <div class="online-profile" style="margin-top:10px">
-          <input id="onlineCode" class="online-input" maxlength="6" autocomplete="off" placeholder="CÓDIGO DA SALA" style="text-transform:uppercase;letter-spacing:.16em;text-align:center">
-          <button id="onlineMicBtn" type="button">🎙️ LIGAR MICROFONE</button>
-        </div>
-        <div class="online-room"><div class="online-room-label">CÓDIGO DA SALA</div><div id="onlineRoomCode" class="online-code">------</div><div class="online-note">Compartilhe este código com quem vai jogar com você.</div></div>
-        <div id="onlineStatus" class="online-status">Escolha seu nome e crie uma sala ou entre com um código.</div>
-        <div><div class="online-room-label">JOGADORES</div><div id="onlinePlayers" class="online-players"><div class="small">Nenhum jogador conectado.</div></div></div>
-        <div class="online-bottom">
-          <button id="onlineReadyBtn" class="online-ready" style="display:none">✓ PRONTO</button>
-          <button id="onlineStartBtn" style="display:none">▶ INICIAR PARTIDA</button>
-          <button id="onlineBackClass" class="online-back">← VOLTAR À SELEÇÃO DE CLASSE</button>
-        </div>
-        <div class="online-note">O modo online precisa de internet para conectar os jogadores. O microfone usa permissão de áudio do navegador.</div>
-      </section>
-      <aside class="online-side">
-        <h3>💬 CHAT DA SALA</h3>
-        <p class="small">Converse com todos os jogadores conectados.</p>
-        <div id="onlineChatLog" class="online-chat-log"></div>
-        <div class="online-chat-send"><input id="onlineChatInput" class="online-input" maxlength="180" autocomplete="off" placeholder="Digite uma mensagem..."><button id="onlineChatSend" type="button">ENVIAR</button></div>
-      </aside>
-    </div>
-  </div>
-
-  <div id="charSelect" class="panel center" tabindex="0">
+<div id="charSelect" class="panel center" tabindex="0">
     <h2>ESCOLHA SUA CLASSE</h2>
     <p class="sub">Use as setas para trocar de classe.</p>
     <div id="charCarousel">
@@ -1874,9 +2102,6 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
     </div>
   </div>
 </div>
-
-<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
-
 <script>
 function setGameHUDVisible(visible){
   const hud=document.getElementById("hud");
@@ -2073,7 +2298,7 @@ function debugSelectDungeon(index){
   run.roomsDone=0;
   run.bossesKilled=0;
   rooms=[];currentRoom=null;
-  bullets=[];enemyBullets=[];enemies=[];drops=[];chests=[];particles=[];texts=[];
+  bullets=[];enemyBullets=[];enemies=[];drops=[];chests=[];particles=[];trailParticles=[];texts=[];
   generateDungeon();
   enterRoom(0);
   toast("🐛 DEBUG: DUNGEON "+(index+1)+" • "+DUNGEONS[index][0]);
@@ -2657,279 +2882,27 @@ const UPGRADES=[
 let seed=newSeed(),rng=null,state="menu",selectedChar="Warden",difficulty="NORMAL",plusGame=false,goldenRushMode=false;
 let run=null,keys={},mouse={x:0,y:0,down:false},interactPressed=false;
 let last=performance.now(),cam={x:0,y:0},shake=0;
-let particles=[],bullets=[],enemyBullets=[],enemies=[],drops=[],texts=[],chests=[];
+let particles=[],trailParticles=[],bullets=[],enemyBullets=[],enemies=[],drops=[],texts=[],chests=[];
 let necroSummonFX=[];
 let rooms=[],currentRoom=null;
 let transitionTimer=0,doorHintCooldown=0,slow=1;
 let bossDialogueQueue=[],bossDialogueIndex=0,bossDialogueAfter=null;
 
-/* =========================================================
-   ONLINE CO-OP — HOST AUTHORITATIVE / PEER-TO-PEER
-   O mundo compartilhado é mantido pelo host. Cada jogador mantém
-   seus próprios recursos, XP, armas e posição.
-   ========================================================= */
-let online={
-  enabled:false,role:null,code:"",name:"Jogador",peer:null,hostConn:null,
-  connections:new Map(),remotePlayers:new Map(),remoteBullets:new Map(),
-  personalClaims:new Set(),nextDropId:1,voiceEnabled:false,voiceStream:null,
-  launchMode:false,ready:false,started:false,lastSnapshot:0,lastPlayerSend:0,
-  chatLog:[],audioEls:new Map(),pendingHostStart:null
-};
+function updateCamera(dt){
+  if(!run?.player)return;
+  const p=run.player;
+  const targetX=Number.isFinite(p.x)?p.x:0;
+  const targetY=Number.isFinite(p.y)?p.y:0;
 
-function onlineRandomCode(){
-  const chars="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-  let out="";for(let i=0;i<6;i++)out+=chars[Math.floor(Math.random()*chars.length)];
-  return out;
-}
-function onlinePlayerId(){return Math.random().toString(36).slice(2,10)+Date.now().toString(36).slice(-4)}
-function onlineEnsureUI(){
-  const name=document.getElementById('onlineName');
-  if(name&&online.name)name.value=online.name;
-  onlineRenderLobby();
-}
-function onlineStatus(t,kind=''){
-  const el=document.getElementById('onlineStatus');if(!el)return;
-  el.textContent=t;el.className='online-status '+kind;
-}
-function onlineLobbyOpen(){
-  online.launchMode=true;
-  state='online';
-  show(menu,false);show(charSelect,false);show(document.getElementById('onlinePanel'),true);
-  const onlinePanel=document.getElementById('onlinePanel');
-  if(onlinePanel)onlinePanel.setAttribute('aria-hidden','false');
-  onlineEnsureUI();
-  onlineStatus('Escolha seu nome e crie uma sala ou entre com um código.');
-}
-function onlineBackToClass(){
-  onlineDisconnect(false);
-  online.launchMode=true;state='charSelect';show(document.getElementById('onlinePanel'),false);const onlinePanel=document.getElementById('onlinePanel');if(onlinePanel)onlinePanel.setAttribute('aria-hidden','true');show(menu,false);show(charSelect,true);restoreCharSelectLayout();buildChars();
-}
-function onlineReturnMenu(){onlineDisconnect(false);online.launchMode=false;setupMenu()}
-function onlineSetName(v){
-  v=String(v||'Jogador').trim().replace(/[^\p{L}\p{N}_ .-]/gu,'').slice(0,18)||'Jogador';
-  online.name=v;
-  try{localStorage.setItem('abyssal_online_name',v)}catch(e){}
-}
-function onlineLoadName(){try{online.name=localStorage.getItem('abyssal_online_name')||'Jogador'}catch(e){online.name='Jogador'}}
-function onlinePeerId(){return 'ABYSSAL_'+online.code}
-function onlineLoadPeerJS(){
-  return new Promise((resolve,reject)=>{
-    if(window.Peer)return resolve();
-    const s=document.querySelector('script[src*="peerjs"]');
-    if(!s)return reject(new Error('PeerJS não carregado.'));
-    let tries=0;const timer=setInterval(()=>{if(window.Peer){clearInterval(timer);resolve()}else if(++tries>80){clearInterval(timer);reject(new Error('Não foi possível carregar o serviço online.'))}},100);
-  });
-}
-function onlineBindConn(conn,isHostSide){
-  if(!conn)return;
-  const pid=conn.peer;
-  online.connections.set(pid,conn);
-  conn.on('open',()=>{
-    if(isHostSide){
-      conn.send({type:'welcome',hostName:online.name,code:online.code,seed,difficulty});
-      onlineSendSnapshot(conn);
-      if(online.voiceEnabled&&online.voiceStream)onlineCallPeer(pid);
-      onlineRenderLobby();
-    }else{
-      onlineStatus('Conectado à sala '+online.code+'. Aguardando o host iniciar...','ok');
-      conn.send({type:'hello',name:online.name,id:onlinePlayerId(),character:selectedChar});
-    }
-  });
-  conn.on('data',m=>onlineHandleMessage(conn,m));
-  conn.on('close',()=>onlineHandleDisconnect(pid));
-  conn.on('error',e=>console.warn('[ABYSSAL ONLINE]',e));
-}
-function onlineHandleDisconnect(pid){
-  const rp=online.remotePlayers.get(pid);const name=rp?.name||online.connections.get(pid)?.__name||'Jogador';
-  online.remotePlayers.delete(pid);online.connections.delete(pid);
-  toast('⚠ '+name+' saiu da partida');
-  onlineAppendChat('SISTEMA',name+' saiu da partida.');
-  if(online.role==='host')onlineBroadcast({type:'playerLeft',name});
-  onlineRenderLobby();
-}
-function onlineBroadcast(msg,except=null){for(const [id,c] of online.connections){if(c&&c.open&&id!==except){try{c.send(msg)}catch(e){}}}}
-function onlineSendEvent(msg){
-  if(!online.enabled)return;
-  if(online.role==='guest'){if(online.hostConn?.open)try{online.hostConn.send({...msg,sender:online.name})}catch(e){}}
-  else onlineBroadcast(msg);
-}
-function onlineSnapshotEnemy(e){
-  const o={};for(const k of Object.keys(e)){if(k==='hitSet')continue;const v=e[k];if(typeof v!=='function'&&typeof v!=='symbol')o[k]=v}return o;
-}
-function onlineSnapshotDrop(d){if(d.id==null)d.id='drop_'+(online.nextDropId++);return JSON.parse(JSON.stringify(d,(k,v)=>k==='life'?Math.max(0,v):v))}
-function onlineMakeSnapshot(){
-  if(!run)return null;
-  return {
-    type:'snapshot',dungeon:run.dungeon,roomIndex:run.roomIndex,roomType:currentRoom?.type||'',
-    enemies:enemies.filter(e=>!e.dead).map(onlineSnapshotEnemy),
-    drops:drops.filter(d=>d.life>0).map(onlineSnapshotDrop),
-    chests:JSON.parse(JSON.stringify(chests||[])),
-    enemyBullets:enemyBullets.slice(0,180).map(b=>{const o={};for(const k of Object.keys(b)){const v=b[k];if(k!=='hitSet'&&typeof v!=='function')o[k]=v}return o}),
-    players:[...online.remotePlayers.entries()].map(([id,p])=>({id,name:p.name,x:p.x,y:p.y,hp:p.hp,maxHp:p.maxHp,character:p.character,level:p.level,gold:p.gold,xp:p.xp})).concat(online.role==='host'?[{id:'host',name:online.name,x:run.player.x,y:run.player.y,hp:run.player.hp,maxHp:run.player.maxHp,character:run.character,level:run.level,gold:run.gold,xp:run.xp}]:[])
-  };
-}
-let onlineSnapshotTimer=null;
-let onlineSnapshotQueued=false;
-function onlineSendSnapshot(target=null){
-  const snap=onlineMakeSnapshot();
-  if(!snap)return;
-  if(target){try{target.send(snap)}catch(e){}return;}
-  if(onlineSnapshotTimer){onlineSnapshotQueued=true;return;}
-  onlineBroadcast(snap);
-  onlineSnapshotTimer=setTimeout(()=>{
-    onlineSnapshotTimer=null;
-    if(onlineSnapshotQueued){
-      onlineSnapshotQueued=false;
-      onlineSendSnapshot();
-    }
-  },83);
-}
-function onlineApplySnapshot(m){
-  if(online.role!=='guest'||!run)return;
-  if(Number.isFinite(m.dungeon))run.dungeon=m.dungeon;
-  if(Number.isFinite(m.roomIndex))run.roomIndex=m.roomIndex;
-  if(Array.isArray(m.enemies))enemies=m.enemies.map(e=>({...e,status:e.status||{}}));
-  if(Array.isArray(m.drops))drops=m.drops.map(d=>({...d}));
-  if(Array.isArray(m.chests))chests=m.chests.map(c=>({...c}));
-  if(Array.isArray(m.enemyBullets))enemyBullets=m.enemyBullets.map(b=>({...b}));
-  online.remotePlayers.clear();
-  for(const p of (m.players||[])){
-    if(p.name===online.name&&p.id!=='host')continue;
-    online.remotePlayers.set(p.id,p);
+  const follow=1-Math.exp(-Math.min(.1,Math.max(0,dt))*10);
+  cam.x+=(targetX-cam.x)*follow;
+  cam.y+=(targetY-cam.y)*follow;
+
+  // Reposicionamento imediato após teleporte/troca de sala.
+  if(Math.hypot(targetX-cam.x,targetY-cam.y)>180){
+    cam.x=targetX;
+    cam.y=targetY;
   }
-}
-function onlineHandleMessage(conn,m){
-  if(!m||typeof m!=='object')return;
-  if(m.type==='hello'&&online.role==='host'){
-    conn.__name=m.name||'Jogador';
-    online.remotePlayers.set(conn.peer,{id:conn.peer,name:conn.__name,x:0,y:0,hp:100,maxHp:100,character:m.character||'Warden',level:1,gold:0,xp:0});
-    onlineBroadcast({type:'playerJoined',name:conn.__name},conn.peer);
-    onlineAppendChat('SISTEMA',conn.__name+' entrou na sala.');
-    onlineRenderLobby();onlineSendSnapshot(conn);return;
-  }
-  if(m.type==='welcome'){online.code=m.code||online.code;online.started=false;onlineStatus('Conectado! Aguardando o host iniciar a partida.','ok');onlineRenderLobby();return;}
-  if(m.type==='startGame'){
-    seed=m.seed||seed;difficulty=m.difficulty||difficulty;selectedChar=online.pendingHostStart?.character||selectedChar;online.started=true;online.ready=true;runStarting=false;runInitializing=false;startRun();return;
-  }
-  if(m.type==='snapshot'){onlineApplySnapshot(m);return;}
-  if(m.type==='playerJoined'){toast('✓ '+m.name+' entrou na partida');onlineRenderLobby();return;}
-  if(m.type==='playerLeft'){toast('⚠ '+m.name+' saiu da partida');onlineRenderLobby();return;}
-  if(m.type==='chat'){onlineAppendChat(m.name||'Jogador',m.text||'');return;}
-  if(m.type==='ready'&&online.role==='host'){ const p=online.remotePlayers.get(conn.peer); if(p)p.ready=!!m.ready; onlineRenderLobby(); onlineBroadcast({type:'playerReady',name:m.name,ready:!!m.ready}); return; }
-  if(m.type==='playerReady'){ onlineRenderLobby(); return; }
-  if(m.type==='playerState'&&online.role==='host'){
-    const p=online.remotePlayers.get(conn.peer)||{};
-    const finite=(v,f)=>Number.isFinite(Number(v))?Number(v):f;
-    const maxHp=Math.max(1,Math.min(999,finite(m.maxHp,p.maxHp||100)));
-    p.x=finite(m.x,p.x||0); p.y=finite(m.y,p.y||0);
-    p.hp=Math.max(0,Math.min(maxHp,finite(m.hp,p.hp||maxHp)));
-    p.maxHp=maxHp;
-    p.level=Math.max(1,Math.min(999,Math.floor(finite(m.level,p.level||1))));
-    p.gold=Math.max(0,Math.min(999999,Math.floor(finite(m.gold,p.gold||0))));
-    p.xp=Math.max(0,Math.min(999999,Math.floor(finite(m.xp,p.xp||0))));
-    p.character=CHARS[m.character]?m.character:(p.character||'Warden');
-    p.name=String(m.name||p.name||'Jogador').slice(0,24);
-    p.lastStateAt=performance.now();
-    online.remotePlayers.set(conn.peer,p);return;
-  }
-  if(m.type==='claimDrop'&&online.role==='host'){
-    const d=drops.find(x=>x.id===m.id);if(d){d.life=0;onlineBroadcast({type:'dropClaimed',id:m.id,by:m.name||'Jogador'});onlineSendSnapshot()}return;
-  }
-  if(m.type==='damageEnemy'&&online.role==='host'){
-    const e=enemies.find(x=>x.id===m.id&&!x.dead);
-    const now=performance.now();
-    const p=online.remotePlayers.get(conn.peer)||{};
-    const damage=Math.floor(Number(m.damage));
-    if(!e||!Number.isFinite(damage)||damage<=0||damage>500)return;
-    p.damageWindow=p.damageWindow||{start:now,total:0};
-    if(now-p.damageWindow.start>1000)p.damageWindow={start:now,total:0};
-    if(p.damageWindow.total+damage>2500)return;
-    p.damageWindow.total+=damage;
-    e.hp-=damage;
-    if(e.hp<=0)killEnemy(e);
-    onlineSendSnapshot();
-    return;
-  }
-  if(m.type==='dropClaimed'&&online.role==='guest'){const d=drops.find(x=>x.id===m.id);if(d)d.life=0;return;}
-  if(m.type==='peerName')conn.__name=m.name||conn.__name; 
-}
-function onlineAppendChat(name,text){
-  const box=document.getElementById('onlineChatLog');if(!box)return;
-  const row=document.createElement('div');row.className='online-chat-line';row.innerHTML='<b>'+String(name).replace(/[<>]/g,'')+'</b><span>'+String(text).replace(/[<>]/g,'')+'</span>';box.appendChild(row);box.scrollTop=box.scrollHeight;
-}
-function onlineSendChat(){
-  const input=document.getElementById('onlineChatInput');if(!input)return;const text=input.value.trim().slice(0,180);if(!text)return;
-  onlineAppendChat(online.name,text);onlineBroadcast({type:'chat',name:online.name,text});if(online.role==='guest'&&online.hostConn?.open)try{online.hostConn.send({type:'chat',name:online.name,text})}catch(e){}input.value='';
-}
-async function onlineCreateRoom(){
-  onlineSetName(document.getElementById('onlineName')?.value);onlineDisconnect(false);online.enabled=true;online.role='host';online.code=onlineRandomCode();online.started=false;online.ready=true;
-  onlineStatus('Criando sala '+online.code+'...');
-  try{await onlineLoadPeerJS();online.peer=new Peer(onlinePeerId(),{debug:1});}
-  catch(e){onlineStatus('Não foi possível carregar o sistema online. Verifique a internet.','bad');return;}
-  online.peer.on('open',id=>{online.code=id.replace(/^ABYSSAL_/,'');onlineStatus('SALA CRIADA • código '+online.code,'ok');onlineRenderLobby();});
-  online.peer.on('connection',c=>onlineBindConn(c,true));
-  online.peer.on('call',call=>{if(online.voiceStream)call.answer(online.voiceStream);else call.answer();call.on('stream',stream=>onlineAttachAudio(call.peer,stream));});
-  online.peer.on('error',e=>{console.warn(e);onlineStatus('Erro na sala: '+(e.type||'conexão')+'. Tente criar novamente.','bad');});
-}
-async function onlineJoinRoom(){
-  onlineSetName(document.getElementById('onlineName')?.value);const code=(document.getElementById('onlineCode')?.value||'').trim().toUpperCase();
-  if(!/^[A-Z0-9]{6}$/.test(code)){onlineStatus('Digite um código de sala válido com 6 caracteres.','bad');return;}
-  onlineDisconnect(false);online.enabled=true;online.role='guest';online.code=code;online.started=false;online.ready=true;onlineStatus('Conectando à sala '+code+'...');
-  try{await onlineLoadPeerJS();online.peer=new Peer(undefined,{debug:1});}
-  catch(e){onlineStatus('Não foi possível carregar o sistema online. Verifique a internet.','bad');return;}
-  online.peer.on('open',()=>{online.hostConn=online.peer.connect(onlinePeerId(),{reliable:true});onlineBindConn(online.hostConn,false);});
-  online.peer.on('error',e=>onlineStatus('Não foi possível entrar na sala '+code+'. Confira o código.','bad'));
-}
-function onlineStartMatch(){
-  if(online.role!=='host'||!online.connections.size){onlineStatus('É preciso ter pelo menos 1 convidado conectado.','bad');return;}
-  online.enabled=true;online.started=true;online.ready=true;online.pendingHostStart={character:selectedChar};
-  onlineBroadcast({type:'startGame',seed,difficulty,character:selectedChar});
-  startRun();onlineRenderLobby();
-}
-function onlineToggleReady(){online.ready=!online.ready;if(online.role==='guest'&&online.hostConn?.open)online.hostConn.send({type:'ready',name:online.name,ready:online.ready});onlineRenderLobby()}
-function onlineDisconnect(showNotice=true){
-  if(online.connections)for(const c of online.connections.values()){try{c.close()}catch(e){}}
-  try{online.hostConn?.close()}catch(e){}try{online.peer?.destroy()}catch(e){}
-  if(online.voiceStream)online.voiceStream.getTracks().forEach(t=>t.stop());
-  for(const a of online.audioEls.values())try{a.remove()}catch(e){}
-  online.connections.clear();online.remotePlayers.clear();online.hostConn=null;online.peer=null;online.voiceStream=null;online.enabled=false;online.role=null;online.code='';online.started=false;online.ready=false;
-  if(showNotice)toast('Você saiu da sala.');
-}
-async function onlineToggleMic(){
-  if(!online.enabled){onlineStatus('Entre em uma sala primeiro.','bad');return;}
-  try{
-    if(online.voiceEnabled){online.voiceEnabled=false;online.voiceStream?.getTracks().forEach(t=>t.stop());online.voiceStream=null;onlineRenderLobby();return;}
-    online.voiceStream=await navigator.mediaDevices.getUserMedia({audio:true});online.voiceEnabled=true;
-    if(online.role==='guest')onlineCallPeer(onlinePeerId());else for(const id of online.connections.keys())onlineCallPeer(id);
-    onlineRenderLobby();
-  }catch(e){onlineStatus('Microfone bloqueado ou indisponível no navegador.','bad');}
-}
-function onlineCallPeer(id){
-  if(!online.peer||!online.voiceStream)return;
-  try{const call=online.peer.call(id,online.voiceStream);call?.on('stream',stream=>onlineAttachAudio(id,stream))}catch(e){}
-}
-function onlineAttachAudio(id,stream){
-  let a=online.audioEls.get(id);if(!a){a=document.createElement('audio');a.autoplay=true;a.playsInline=true;a.style.display='none';document.body.appendChild(a);online.audioEls.set(id,a)}a.srcObject=stream;a.play?.().catch(()=>{});
-}
-function onlineRenderLobby(){
-  const room=document.getElementById('onlineRoomCode'),players=document.getElementById('onlinePlayers'),start=document.getElementById('onlineStartBtn'),ready=document.getElementById('onlineReadyBtn'),mic=document.getElementById('onlineMicBtn');
-  if(room)room.textContent=online.code||'------';
-  if(mic)mic.textContent=online.voiceEnabled?'🎙️ MICROFONE: LIGADO':'🎙️ LIGAR MICROFONE';
-  if(start)start.style.display=online.role==='host'?'inline-flex':'none';
-  if(ready)ready.style.display=online.role==='guest'?'inline-flex':'none';
-  if(ready)ready.textContent=online.ready?'✓ PRONTO':'○ NÃO PRONTO';
-  if(players){const arr=[];arr.push('🟢 '+online.name+' (você)');for(const p of online.remotePlayers.values())arr.push('🔵 '+(p.name||'Jogador')+(p.ready?' • pronto':''));players.innerHTML=arr.map(x=>'<div>'+x+'</div>').join('')||'<div class="small">Nenhum jogador conectado.</div>'}
-  if(start)start.textContent=online.started?'PARTIDA EM ANDAMENTO':'▶ INICIAR PARTIDA';
-}
-function onlineRefreshLaunchVisibility(){onlineRenderLobby()}
-function onlineSetFloatChat(){}
-function onlineRenderProfile(){onlineRenderLobby()}
-function onlineUpdateDisconnectButton(){onlineRenderLobby()}
-function onlineTick(dt){
-  if(!online.enabled||state!=='game'||!run)return;
-  const now=performance.now();
-  if(online.role==='host'&&now-online.lastSnapshot>100){online.lastSnapshot=now;onlineSendSnapshot()}
-  if(online.role==='guest'&&online.hostConn?.open&&now-online.lastPlayerSend>80){online.lastPlayerSend=now;online.hostConn.send({type:'playerState',name:online.name,x:run.player.x,y:run.player.y,hp:run.player.hp,maxHp:run.player.maxHp,character:run.character,level:run.level,gold:run.gold,xp:run.xp})}
 }
 
 const menu=document.getElementById("menu");
@@ -3029,11 +3002,7 @@ function setupMenu(){
   // continuando depois de sair do modo celular.
   if(typeof stopMobileInput === "function") stopMobileInput();
   show(document.getElementById("settingsPanel"),false);
-  const onlinePanel=document.getElementById("onlinePanel");
-  if(onlinePanel){show(onlinePanel,false);onlinePanel.setAttribute("aria-hidden","true");onlinePanel.style.pointerEvents="auto";}
-  // O chat flutuante nunca deve aparecer sozinho ao entrar no menu.
-  
-  state="menu";
+state="menu";
   document.getElementById("seedText").textContent=seed;
   const seedInput=document.getElementById("seedInput");
   if(seedInput)seedInput.value=seed;
@@ -3049,7 +3018,7 @@ function setupMenu(){
   if(goldenStatus)goldenStatus.textContent="";
   document.getElementById("diffMenu").textContent=difficulty;
   if(typeof applyMenuTheme==="function")applyMenuTheme();
-  show(menu,true);show(document.getElementById("onlinePanel"),false);show(document.getElementById("goldenLockPanel"),false);show(hud,false);show(charSelect,false);show(skillTreePanel,false);show(difficultyPanel,false);show(settingsPanel,false);show(document.getElementById("updatesPanel"),false);show(document.getElementById("achievementsPanel"),false);show(document.getElementById("battlePassPanel"),false);show(document.getElementById("inventoryPanel"),false);show(document.getElementById("skinWardrobePanel"),false);show(levelup,false);
+  show(menu,true);show(document.getElementById("goldenLockPanel"),false);show(hud,false);show(charSelect,false);show(skillTreePanel,false);show(difficultyPanel,false);show(settingsPanel,false);show(document.getElementById("updatesPanel"),false);show(document.getElementById("achievementsPanel"),false);show(document.getElementById("battlePassPanel"),false);show(document.getElementById("inventoryPanel"),false);show(document.getElementById("skinWardrobePanel"),false);show(levelup,false);
   show(pause,false);show(gameOver,false);show(victory,false);
   show(bossUI,false);
   const mobileRoot=document.getElementById("mobileControls");
@@ -3078,7 +3047,7 @@ function classLocked(name,c){
   return (c.unlockRequired&&!save.unlockedClasses.includes(name))||(c.plus&&!save.plusUnlocked&&!save.unlockedClasses.includes(name));
 }
 function classLockText(name){if(name==="Midas")return "🔒 Encontre 22 moedas de ouro especiais em uma única run.";if(name==="Dragao")return "🔒 Derrote Lúcifer, chefe 11, usando o Lança-Chamas.";if(name==="Apostador")return "🔒 Use a máquina de cassino 10 vezes.";if(name==="Bomber")return "🔒 Complete o jogo para desbloquear.";return "";}
-function startSelectedClass(){const entries=Object.entries(CHARS),item=entries[charCarouselIndex];if(!item)return;const[name,c]=item;if(classLocked(name,c)){if(name==="Midas")toast("🔒 MIDAS • ENCONTRE 22 MOEDAS DE OURO ESPECIAIS");else if(name==="Dragao")toast("🔒 DRAGÃO • DERROTE LÚCIFER (CHEFE 11) COM O LANÇA-CHAMAS");else if(name==="Apostador")toast("🔒 APOSTADOR • USE O CASSINO 10 VEZES");else if(name==="Cacador")toast("🔒 CAÇADOR • COMPLETE O PASSE CAÇA AO PRÊMIO");else toast("🔒 BOMBER • ZERE O JOGO PARA DESBLOQUEAR");return;}sfx("selectClass");selectedChar=name;plusGame=!!c.plus;const typedSeed=document.getElementById("seedInput")?.value.trim();if(typedSeed)seed=typedSeed;else if(!seed)seed=newSeed();if(online.launchMode){setTimeout(()=>onlineLobbyOpen(),180);return;}setTimeout(()=>startRun(),360);}
+function startSelectedClass(){const entries=Object.entries(CHARS),item=entries[charCarouselIndex];if(!item)return;const[name,c]=item;if(classLocked(name,c)){if(name==="Midas")toast("🔒 MIDAS • ENCONTRE 22 MOEDAS DE OURO ESPECIAIS");else if(name==="Dragao")toast("🔒 DRAGÃO • DERROTE LÚCIFER (CHEFE 11) COM O LANÇA-CHAMAS");else if(name==="Apostador")toast("🔒 APOSTADOR • USE O CASSINO 10 VEZES");else if(name==="Cacador")toast("🔒 CAÇADOR • COMPLETE O PASSE CAÇA AO PRÊMIO");else toast("🔒 BOMBER • ZERE O JOGO PARA DESBLOQUEAR");return;}sfx("selectClass");selectedChar=name;plusGame=!!c.plus;const typedSeed=document.getElementById("seedInput")?.value.trim();if(typedSeed)seed=typedSeed;else if(!seed)seed=newSeed();setTimeout(()=>startRun(),360);}
 function renderCharCarousel(){const entries=Object.entries(CHARS);if(!entries.length)return;charCarouselIndex=((charCarouselIndex%entries.length)+entries.length)%entries.length;const[name,c]=entries[charCarouselIndex],locked=classLocked(name,c),preview=document.getElementById("charPreview");if(!preview)return;const eq=typeof getEquippedSkin==="function"?getEquippedSkin(name):null;const skinLabel=eq&&eq.id!=="default"?` • ${eq.name}`:"";preview.innerHTML=`<div class="char-portrait" style="border-color:${c.color};box-shadow:0 0 45px ${c.color}33,inset 0 0 35px #0008">${classIcon(name)}</div><div class="char-name" style="color:${c.color}">${name}${c.plus?" • PLUS":""}${skinLabel}</div><div class="char-stats"><span class="char-stat">❤️ ${c.hp} HP</span><span class="char-stat">💨 ${c.speed} velocidade</span><span class="char-stat">⚔️ ${Math.round(c.damage*100)}% dano base</span></div><div class="char-ability">${c.ability}</div>${locked?`<div class="char-lock">${classLockText(name)}</div>`:""}<button class="char-select-button" id="selectCurrentClass" type="button" ${locked?"disabled":""}>${locked?"🔒 BLOQUEADO":"ESCOLHER CLASSE"}</button><button class="char-skin-btn" id="openSkinWardrobe" type="button">👗 ARMÁRIO DE SKINS</button><div id="charCounter">${charCarouselIndex+1} / ${entries.length}</div>`;document.getElementById("selectCurrentClass")?.addEventListener("click",startSelectedClass);document.getElementById("openSkinWardrobe")?.addEventListener("click",()=>{if(typeof openSkinWardrobe==="function")openSkinWardrobe(name);});}
 function moveCharSelection(dir){const entries=Object.entries(CHARS);if(!entries.length)return;charCarouselIndex=(charCarouselIndex+dir+entries.length)%entries.length;renderCharCarousel();}
 function buildChars(){const entries=Object.entries(CHARS),current=entries.findIndex(([name])=>name===selectedChar);charCarouselIndex=current>=0?current:0;renderCharCarousel();}
@@ -3143,6 +3112,9 @@ let runInitializing=false;
 let runStartErrorShown=false;
 
 function startRun(){
+  // Fechamos explicitamente antes de mostrar a arena para impedir o painel
+  // de permanecer por cima da run no host ou no convidado.
+
   // Evita dois cliques/eventos simultâneos iniciarem duas runs e deixarem
   // o estado do jogo parcialmente inicializado.
   if(runStarting || runInitializing)return;
@@ -3309,6 +3281,13 @@ function enterRoom(i){
   clearCombatArrays();
 
   run.player.x=0;run.player.y=0;
+  // A câmera precisa acompanhar a troca de sala instantaneamente.
+  // Sem este snap, ela fica na posição da sala anterior e o player
+  // aparece deslocado até o suavizador conseguir alcançá-lo.
+  cam.x=run.player.x;
+  cam.y=run.player.y;
+  // A câmera é reposicionada junto com o spawn; nenhum estado antigo de rede
+  // pode arrastá-la para a sala anterior.
   run.player.invuln=.35;
   run.skyHoleCooldown=0;
   run.skyBlur=0;
@@ -4223,7 +4202,6 @@ function hitEnemy(e,b){
 
   let d=b.dmg*mult;
   if((run.frenzyTimer||0)>0)d*=1.10;
-  if(online.enabled&&online.role==="guest"&&b.owner!=="remote"&&e.id){onlineSendEvent({type:"damageEnemy",id:e.id,damage:d});}
   if((run.dragonFrenzyTimer||0)>0)d*=1.35;
 
   if(run.relics.some(r=>r[2]==="ability")&&b.fromAbility)d*=1.15;
@@ -4766,7 +4744,6 @@ function hideRelicTooltip(){
 function update(dt){
   if(relicInventoryOpen)return;
   if(state!=="game")return;
-  onlineTick(dt);
 
   // Proteção contra estado "game" sem uma run válida.
   // Evita: TypeError: Cannot read properties of null (reading 'time')
@@ -5101,11 +5078,7 @@ function update(dt){
   bullets=bullets.filter(b=>b.life>0&&Math.abs(b.x)<1000&&Math.abs(b.y)<800);
   enemyBullets=enemyBullets.filter(b=>b.life>0&&Math.abs(b.x)<1100&&Math.abs(b.y)<900);
 
-  /* Enemies — somente o host simula o mundo compartilhado. */
-  if(online.enabled&&online.role==="guest"){
-    // O guest recebe inimigos/drops/projéteis por snapshots do host.
-    // O jogador continua livre para andar, mirar, atirar e coletar recursos.
-  }else for(const e of enemies){
+  for(const e of enemies){
     if(e.dead)continue;
 
     if(e.ally){
@@ -5413,8 +5386,8 @@ function update(dt){
 
   if(p.hp<=0)die();
 
-  cam.x+=(p.x-cam.x)*Math.min(1,dt*7);
-  cam.y+=(p.y-cam.y)*Math.min(1,dt*7);
+  // Câmera centralizada em um único ponto de controle.
+  updateCamera(dt);
   shake=Math.max(0,shake-dt*30);
 
   particles=particles.filter(q=>(q.life-=dt)>0);
@@ -5422,6 +5395,7 @@ function update(dt){
     q.x+=q.vx*dt;q.y+=q.vy*dt;
     q.vx*=.96;q.vy*=.96;
   }
+  updateTrailParticles(dt);
 
   texts=texts.filter(t=>(t.life-=dt)>0);
   texts.forEach(t=>t.y-=20*dt);
@@ -5546,7 +5520,7 @@ function render(){
   for(const e of enemies){drawEnemy(e);drawBossLaserWarning(e);}
 
   drawNecroSummonFX();
-  drawOnlineRemotePlayers();
+  drawTrailParticles();
 
   if(run.dungeon===5&&run.fireStill>1.5){
     X.save();X.globalAlpha=.16+.12*Math.min(1,Math.max(0,run.fireStill-2.4));
@@ -6062,19 +6036,17 @@ function drawRoom(d){
   }
 }
 
-function drawOnlineRemotePlayers(){
-  if(!online.enabled||!online.remotePlayers.size)return;
-  for(const p of online.remotePlayers.values()){
-    if(!Number.isFinite(p.x)||!Number.isFinite(p.y))continue;
-    X.save();X.translate(p.x,p.y);
-    X.shadowBlur=18;X.shadowColor="#62d8ff";X.fillStyle="#2f9dcc";
-    X.beginPath();X.arc(0,0,15,0,Math.PI*2);X.fill();
-    X.shadowBlur=0;X.fillStyle="#eaf8ff";X.beginPath();X.arc(0,-3,7,0,Math.PI*2);X.fill();
-    X.fillStyle="#07111f";X.font="900 8px system-ui";X.textAlign="center";X.textBaseline="middle";X.fillText(classIcon(p.character||"Warden"),0,-3);
-    X.fillStyle="#fff";X.font="800 11px system-ui";X.textBaseline="alphabetic";X.fillText(String(p.name||"Jogador").slice(0,18),0,-24);
-    if(Number.isFinite(p.maxHp)&&p.maxHp>0){X.fillStyle="#1b2434";X.fillRect(-22,-19,44,4);X.fillStyle="#62e39b";X.fillRect(-22,-19,44*clamp((p.hp||0)/p.maxHp,0,1),4)}
-    X.restore();
-  }
+function drawRemoteTrailMarker(p){
+  const cfg=PLAYER_TRAILS[p.trail];if(!cfg)return;
+  X.save();X.translate(p.x,p.y+11);X.globalAlpha=.55;
+  const now=performance.now()*.001;
+  if(p.trail==="flame"){X.shadowBlur=10;X.shadowColor="#ff5a18";X.fillStyle="#ff7a24";X.beginPath();X.arc(0,0,5+Math.sin(now*8)*1.5,0,Math.PI*2);X.fill();}
+  else if(p.trail==="ice"){X.shadowBlur=9;X.shadowColor="#7befff";X.strokeStyle="#c8fbff";X.lineWidth=2;X.strokeRect(-4,-4,8,8);}
+  else if(p.trail==="poison"){X.shadowBlur=9;X.shadowColor="#69ff75";X.fillStyle="#69df71";X.beginPath();X.arc(0,0,5,0,Math.PI*2);X.fill();}
+  else if(p.trail==="lightning"){X.shadowBlur=10;X.shadowColor="#8eefff";X.strokeStyle="#dfffff";X.lineWidth=2;X.beginPath();X.moveTo(-7,-3);X.lineTo(-1,1);X.lineTo(-4,7);X.lineTo(7,0);X.stroke();}
+  else if(p.trail==="gold"){X.shadowBlur=10;X.shadowColor="#ffd34e";X.fillStyle="#ffd34e";X.beginPath();X.arc(0,0,4,0,Math.PI*2);X.fill();}
+  else {X.fillStyle="#9fb4ff";X.shadowBlur=8;X.shadowColor="#9fb4ff";X.beginPath();X.arc(0,0,4,0,Math.PI*2);X.fill();}
+  X.restore();
 }
 
 function drawPlayer(){
@@ -7233,7 +7205,7 @@ function gpJustReleased(g,i){return !gpPressed(g,i)&&!!gamepadState.prev[i];}
 function gpAxis(g,i){return gpDead(g?.axes?.[i]||0);}
 function gpAny(g){return !!g&&g.connected;}
 function visiblePanel(){
-  const ids=["menu","charSelect","controlsPanel","skillTreePanel","difficultyPanel","settingsPanel","updatesPanel","onlinePanel","pause","levelup","gameOver","victory","bossDialogue"];
+  const ids=["menu","charSelect","controlsPanel","skillTreePanel","difficultyPanel","settingsPanel","updatesPanel","pause","levelup","gameOver","victory","bossDialogue"];
   return ids.map(id=>document.getElementById(id)).find(el=>el&&getComputedStyle(el).display!=="none")||null;
 }
 function controllerFocusables(panel){
@@ -7343,7 +7315,7 @@ addEventListener("keydown",e=>{
     keys[e.code]=true;
     return;
   }
-  if(e.code==="Tab"&&!e.repeat && online.enabled && run && state==="game"){
+  if(e.code==="Tab"&&!e.repeat && run && state==="game"){
     e.preventDefault();
     return;
   }
@@ -8232,7 +8204,111 @@ function closeInventory(){show(document.getElementById("inventoryPanel"),false);
 function renderInventoryTrails(){ensureInventory();const eq=save.equippedTrail||"none";const lab=document.getElementById("invEquippedTrail");if(lab)lab.textContent=(PLAYER_TRAILS[eq]||PLAYER_TRAILS.none).name;const box=document.getElementById("invTrailsList");if(!box)return;box.innerHTML="";Object.values(PLAYER_TRAILS).forEach(t=>{const unlocked=t.always||save.unlockedTrails.includes(t.id),isEq=eq===t.id;const row=document.createElement("div");row.className="inv-item"+(isEq?" equipped":"")+(unlocked?"":" locked");row.innerHTML=`<div class="inv-icon">${t.icon}</div><div style="flex:1"><b>${t.name}</b><div style="font-size:11px;color:#8fa3c6">${t.desc}</div></div>`;const btn=document.createElement("button");btn.type="button";if(!unlocked){btn.disabled=true;btn.textContent="🔒";}else if(isEq){btn.disabled=true;btn.textContent="✓";}else{btn.textContent="EQUIPAR";btn.onclick=()=>equipTrail(t.id);}row.appendChild(btn);box.appendChild(row);});}
 function applyMenuTheme(){const m=document.getElementById("menu");if(m)m.classList.toggle("theme-colorido",save.menuTheme==="colorido");}
 let _trailFxTimer=0;
-function updatePlayerTrail(dt){if(state!=="game"||!run||!run.player||typeof particles==="undefined")return;ensureInventory();if((save.equippedTrail||"none")!=="flame")return;const moving=keys.KeyW||keys.KeyA||keys.KeyS||keys.KeyD||keys.ArrowUp||keys.ArrowDown||keys.ArrowLeft||keys.ArrowRight;if(!moving)return;_trailFxTimer-=dt;if(_trailFxTimer>0)return;_trailFxTimer=0.04;const p=run.player;for(let i=0;i<2;i++)particles.push({x:p.x+(Math.random()-.5)*10,y:p.y+8,vx:(Math.random()-.5)*28,vy:-40-Math.random()*40,life:.3,max:.5,r:3,p:1.5,type:"flame"});}
+function updatePlayerTrail(dt){
+  if(state!=="game"||!run||!run.player)return;
+  ensureInventory();
+
+  const id=save.equippedTrail||"none";
+  if(id==="none"||!PLAYER_TRAILS[id])return;
+
+  const p=run.player;
+  if(!Number.isFinite(run._trailLastX)||!Number.isFinite(run._trailLastY)){
+    run._trailLastX=p.x;run._trailLastY=p.y;return;
+  }
+
+  const dx=p.x-run._trailLastX,dy=p.y-run._trailLastY;
+  const moved=Math.hypot(dx,dy);
+  run._trailLastX=p.x;run._trailLastY=p.y;
+
+  // Teleportes/dashs muito grandes não devem desenhar uma linha atravessando
+  // metade da arena. Ainda assim deixamos uma pequena marca no ponto final.
+  const moving=moved>0.08;
+  if(!moving)return;
+
+  _trailFxTimer-=dt;
+  if(_trailFxTimer>0)return;
+  _trailFxTimer=.035;
+
+  const count=id==="rainbow"||id==="lightning"?2:1;
+  const cap=420;
+  for(let i=0;i<count && trailParticles.length<cap;i++){
+    const side=(Math.random()-.5)*12;
+    const len=Math.max(0.001,moved);
+    const nx=-dy/len,ny=dx/len;
+    const x=p.x+nx*side+(Math.random()-.5)*5;
+    const y=p.y+ny*side+(Math.random()-.5)*5;
+    trailParticles.push({
+      x,y,
+      px:x-dx*.22,py:y-dy*.22,
+      vx:-dx*.35+(Math.random()-.5)*18,
+      vy:-dy*.35+(Math.random()-.5)*18,
+      life:id==="shadow"||id==="void"?.42:.52,
+      max:id==="shadow"||id==="void"?.42:.52,
+      r:2.5+Math.random()*2.5,
+      type:id,
+      seed:Math.random()*Math.PI*2
+    });
+  }
+}
+
+function updateTrailParticles(dt){
+  if(!trailParticles.length)return;
+  for(const q of trailParticles){
+    q.life-=dt;
+    q.x+=q.vx*dt;q.y+=q.vy*dt;
+    q.vx*=Math.pow(.08,dt);q.vy*=Math.pow(.08,dt);
+  }
+  trailParticles=trailParticles.filter(q=>q.life>0);
+}
+
+function drawTrailParticles(){
+  if(!trailParticles.length)return;
+  const now=performance.now()*.001;
+  for(const q of trailParticles){
+    const a=Math.max(0,q.life/q.max);
+    const pulse=.85+.15*Math.sin(now*9+q.seed);
+    X.save();
+    X.globalAlpha=a*.82;
+    X.translate(q.x,q.y);
+    const r=q.r*pulse;
+
+    if(q.type==="flame"){
+      X.shadowBlur=14;X.shadowColor="#ff4b16";
+      X.fillStyle="#ff5a18";X.beginPath();X.moveTo(r*1.8,0);X.quadraticCurveTo(0,-r*1.1,-r*.9,0);X.quadraticCurveTo(0,r*1.1,r*1.8,0);X.fill();
+      X.fillStyle="#ffd166";X.beginPath();X.arc(r*.2,0,r*.65,0,Math.PI*2);X.fill();
+    }else if(q.type==="ice"){
+      X.shadowBlur=12;X.shadowColor="#72e8ff";X.strokeStyle="#bdf7ff";X.lineWidth=2;
+      X.beginPath();X.moveTo(0,-r*2.2);X.lineTo(r*1.3,0);X.lineTo(0,r*2.2);X.lineTo(-r*1.3,0);X.closePath();X.stroke();
+    }else if(q.type==="poison"){
+      X.shadowBlur=15;X.shadowColor="#70ff72";X.fillStyle="#69df71";X.beginPath();X.arc(0,0,r*1.25,0,Math.PI*2);X.fill();
+      X.fillStyle="#b9ff8a";X.globalAlpha=a*.45;X.beginPath();X.arc(-r*.8,-r*.7,r*.65,0,Math.PI*2);X.fill();
+    }else if(q.type==="lightning"){
+      X.shadowBlur=16;X.shadowColor="#70dfff";X.strokeStyle="#d9fbff";X.lineWidth=2.5;X.beginPath();
+      X.moveTo(-r*2,-r*.3);X.lineTo(-r*.6,r*.2);X.lineTo(-r*.95,r*1.4);X.lineTo(r*.35,r*.25);X.lineTo(r*1.6,r*.65);X.stroke();
+    }else if(q.type==="shadow"){
+      X.shadowBlur=14;X.shadowColor="#8d6cff";X.fillStyle="#17102e";X.beginPath();X.ellipse(0,0,r*2.1,r,0,0,Math.PI*2);X.fill();
+      X.strokeStyle="#8b6cff";X.lineWidth=1;X.stroke();
+    }else if(q.type==="star"){
+      X.shadowBlur=14;X.shadowColor="#fff2a8";X.fillStyle="#fff4bd";X.beginPath();
+      for(let i=0;i<8;i++){const aa=-Math.PI/2+i*Math.PI/4,rr=i%2?r*.55:r*1.8;const x=Math.cos(aa)*rr,y=Math.sin(aa)*rr;i===0?X.moveTo(x,y):X.lineTo(x,y)}X.closePath();X.fill();
+    }else if(q.type==="blood"){
+      X.shadowBlur=10;X.shadowColor="#ff2f55";X.fillStyle="#e82e4f";X.beginPath();X.moveTo(0,-r*1.7);X.bezierCurveTo(r*1.5,0,r*.8,r*1.6,0,r*1.9);X.bezierCurveTo(-r*.8,r*1.6,-r*1.5,0,0,-r*1.7);X.fill();
+    }else if(q.type==="gold"){
+      X.shadowBlur=12;X.shadowColor="#ffd34e";X.fillStyle="#ffd34e";X.beginPath();X.arc(0,0,r*1.2,0,Math.PI*2);X.fill();
+      X.fillStyle="#fff1a6";X.globalAlpha=a*.65;X.beginPath();X.arc(-r*.4,-r*.4,r*.35,0,Math.PI*2);X.fill();
+    }else if(q.type==="void"){
+      X.shadowBlur=16;X.shadowColor="#a878ff";X.strokeStyle="#b58aff";X.lineWidth=2;X.beginPath();
+      X.moveTo(-r*2,-r);X.lineTo(-r*.5,0);X.lineTo(-r*1.2,r*1.4);X.moveTo(r*2,-r*1.2);X.lineTo(r*.4,r*.1);X.lineTo(r*1.1,r*1.5);X.stroke();
+    }else if(q.type==="nature"){
+      X.shadowBlur=8;X.shadowColor="#5cff9a";X.strokeStyle="#68e58a";X.lineWidth=1.5;X.beginPath();X.moveTo(0,r*1.6);X.quadraticCurveTo(-r*1.4,0,0,-r*1.6);X.quadraticCurveTo(r*1.4,0,0,r*1.6);X.stroke();
+    }else if(q.type==="rainbow"){
+      const hue=(now*180+q.seed*80)%360;X.shadowBlur=12;X.shadowColor=`hsl(${hue},100%,65%)`;X.fillStyle=`hsl(${hue},100%,65%)`;X.beginPath();X.arc(0,0,r*1.45,0,Math.PI*2);X.fill();
+    }
+    X.restore();
+  }
+  X.globalAlpha=1;
+}
+
 
 
 document.getElementById("start").onclick=()=>{
@@ -8621,7 +8697,7 @@ ability=function(){
   }
 };
 dash=function(){const ok=run&&run.dashCooldown<=0;if(ok)sfx('dash');_dash()};
-collectDrop=function(d){const before=d?.life;_collectDrop(d);if(d&&before>0&&d.life<=0){if(online.enabled&&online.role==='guest'&&d.id!=null){onlineSendEvent({type:'claimDrop',id:d.id,name:online.name});}if(d.type==='gold'||d.type==='midasCoin')sfx('gold');else if(d.type==='shopweapon'||d.type==='shoprelic'||d.type==='shopheal')sfx('buy');else if(d.type==='relic')sfx('relic')}};
+collectDrop=function(d){const before=d?.life;_collectDrop(d);if(d&&before>0&&d.life<=0){if(d.type==='gold'||d.type==='midasCoin')sfx('gold');else if(d.type==='shopweapon'||d.type==='shoprelic'||d.type==='shopheal')sfx('buy');else if(d.type==='relic')sfx('relic')}};
 hurt=function(source,dmg){
   if(run?.debugGodActive){
     if(run.player)run.player.hp=run.player.maxHp;
@@ -8640,35 +8716,6 @@ die=function(){if(state==='game'&&run?.player?.hp<=0)sfx('lose');_die()};
 /* =========================================================
    LOOP
    ========================================================= */
-
-
-onlineLoadName();
-document.getElementById('onlineMenuBtn')?.addEventListener('click',()=>{
-  // O botão do menu deve abrir diretamente o lobby online.
-  // A seleção de classe continua disponível pelo fluxo interno do lobby/partida.
-  try{
-    onlineLobbyOpen();
-  }catch(err){
-    console.error('[ABYSSAL ONLINE] Falha ao abrir lobby:',err);
-    online.launchMode=true;
-    state='menu';
-    show(document.getElementById('onlinePanel'),false);
-    show(charSelect,false);
-    show(menu,true);
-    toast('⚠️ Não foi possível abrir o menu online.');
-  }
-});
-document.getElementById('onlineNameSave')?.addEventListener('click',()=>{onlineSetName(document.getElementById('onlineName')?.value);onlineStatus('Nome definido como '+online.name+'.','ok');onlineRenderLobby()});
-document.getElementById('onlineCreateBtn')?.addEventListener('click',onlineCreateRoom);
-document.getElementById('onlineJoinBtn')?.addEventListener('click',onlineJoinRoom);
-document.getElementById('onlineStartBtn')?.addEventListener('click',onlineStartMatch);
-document.getElementById('onlineReadyBtn')?.addEventListener('click',onlineToggleReady);
-document.getElementById('onlineMicBtn')?.addEventListener('click',onlineToggleMic);
-document.getElementById('onlineBackClass')?.addEventListener('click',onlineBackToClass);
-document.getElementById('onlineChatSend')?.addEventListener('click',onlineSendChat);
-document.getElementById('onlineChatInput')?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();onlineSendChat()}});
-document.getElementById('onlineName')?.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();document.getElementById('onlineNameSave')?.click()}});
-document.getElementById('onlineCode')?.addEventListener('input',e=>e.target.value=e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6));
 
 document.getElementById('optionsBtn')?.addEventListener('click',()=>{
   gamepadRemapAction=null;
