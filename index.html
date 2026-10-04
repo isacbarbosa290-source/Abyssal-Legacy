@@ -280,7 +280,7 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
 .difficulty-card{position:relative;text-align:left;min-height:120px;padding:16px 17px;border-radius:15px;background:linear-gradient(145deg,#111a30,#0b1122);border:1px solid #3d4d70;box-shadow:inset 0 1px #ffffff0b,0 10px 28px #0005;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
 .difficulty-card b{font-size:15px;letter-spacing:.06em}.difficulty-card span{font-size:12px;color:#b9c6df;line-height:1.35}.difficulty-card small{font-size:10px;color:#7f91b5;line-height:1.35}
 .difficulty-card:hover{transform:translateY(-2px);border-color:#718bc0;background:linear-gradient(145deg,#172441,#0d1529);box-shadow:0 14px 32px #0007,0 0 24px #607cff18}
-.difficulty-card[data-diff="NORMAL"] b{color:#9ec7ff}.difficulty-card[data-diff="HARD"] b{color:#ffbd67}.difficulty-card[data-diff="NIGHTMARE"] b{color:#ff718e}.difficulty-card[data-diff="HELL"] b{color:#ff5364}.difficulty-card[data-diff="ABYSS"] b{color:#c69cff}
+.difficulty-card[data-diff="EASY"] b{color:#7ee7a5}.difficulty-card[data-diff="NORMAL"] b{color:#9ec7ff}.difficulty-card[data-diff="HARD"] b{color:#ffbd67}.difficulty-card[data-diff="NIGHTMARE"] b{color:#ff718e}.difficulty-card[data-diff="HELL"] b{color:#ff5364}.difficulty-card[data-diff="ABYSS"] b{color:#c69cff}
 .abyss-difficulty{grid-column:1/-1;background:linear-gradient(145deg,#18102d,#0c0a18);border-color:#684f91}
 .difficulty-summary{display:flex;justify-content:center;gap:35px;margin:4px auto 18px;padding:10px 16px;border:1px solid #33415f;border-radius:12px;background:#080e1caa}
 .difficulty-summary div{display:flex;flex-direction:column;gap:3px}.difficulty-summary span{font-size:9px;letter-spacing:.13em;color:#7182a5}.difficulty-summary b{font-size:12px;color:#eaf1ff}
@@ -532,8 +532,10 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
 #achievementPopup{
   display:none;
   position:fixed;
-  top:18px;
-  left:18px;
+  top:50%;
+  right:18px;
+  left:auto;
+  transform:translate(0,-50%);
   z-index:9500;
   align-items:center;
   gap:12px;
@@ -547,7 +549,8 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
   box-shadow:0 10px 35px rgba(0,0,0,.65);
   pointer-events:none;
 }
-#achievementPopup.ach-pop-show{display:flex;}
+#achievementPopup.ach-pop-show{display:flex;animation:achievementSlideRight 2.8s cubic-bezier(.2,.8,.2,1) forwards;}
+@keyframes achievementSlideRight{0%{opacity:0;transform:translate(-120px,-50%) scale(.96)}12%{opacity:1;transform:translate(0,-50%) scale(1)}72%{opacity:1;transform:translate(0,-50%) scale(1)}100%{opacity:0;transform:translate(120px,-50%) scale(.96)}}
 .ach-pop-icon{font-size:28px;line-height:1;}
 .ach-pop-kicker{font-size:11px;font-weight:900;letter-spacing:.08em;color:#ffd76a;}
 .ach-pop-name{font-size:14px;font-weight:950;margin-top:2px;}
@@ -601,7 +604,7 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
 }
 
 #menu.abyss-menu:after{
-  content:"ABYSSAL LEGACY  •  v6.5"!important;
+  content:"ABYSSAL LEGACY  •  v6.6"!important;
   position:absolute!important;
   right:6.1vw!important;
   bottom:4.1vh!important;
@@ -1834,6 +1837,20 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
     <p class="sub" style="text-align:center">Histórico de novidades, melhorias e correções do ABYSSAL LEGACY.</p>
     <div class="updates-list">
       <article class="update-entry">
+        <div class="update-head"><span class="update-version">v6.6 • CASSINO, MIMICOS & DIFICULDADES</span><span class="update-date">04/10/2026</span></div>
+        <div><span class="update-tag">CASSINO</span><span class="update-tag">MIMICOS</span><span class="update-tag">DIFICULDADE</span><span class="update-tag">CONQUISTAS</span></div>
+        <p>Uma atualização focada em risco, recompensas, dificuldade e encontros surpresa durante a run.</p>
+        <ul>
+          <li><b>Recompensas do Cassino:</b> a roleta foi refeita com as novas recompensas e probabilidades solicitadas, incluindo fragmentos, level up, dano, moedas e a Moeda do Midas.</li>
+          <li><b>Vida e dano:</b> o cassino agora pode reduzir a vida máxima em 50% ou o dano em 50%, além de oferecer o raro bônus de +100 de dano.</li>
+          <li><b>Efeito lento:</b> uma recompensa pode deixar o jogador 50% mais lento durante 1 minuto.</li>
+          <li><b>Notificação de conquistas:</b> o aviso agora surge no centro-direito, desliza para a direita e desaparece.</li>
+          <li><b>Mímicos de baú:</b> mímicos não aparecem mais soltos durante a sala. Eles só podem surgir quando o jogador abre um baú; qualquer tipo de baú pode ser uma armadilha e, com uma chance de 15%, explode em fumaça e revela um Mímico Elite.</li>
+          <li><b>Modo Fácil:</b> foi adicionada uma nova dificuldade, com inimigos mais lentos, menos resistentes e com ataques/projéteis mais tranquilos.</li>
+          <li><b>Velocidade por dificuldade:</b> cada dificuldade agora possui seu próprio multiplicador de velocidade, indo do mais lento no Fácil ao mais rápido no Abismo.</li>
+        </ul>
+      </article>
+      <article class="update-entry">
         <div class="update-head"><span class="update-version">v6.5 • CAÇA AO PRÊMIO</span><span class="update-date">03/10/2026</span></div>
         <div><span class="update-tag">PROGRESSÃO</span><span class="update-tag">LOJA</span><span class="update-tag">PERSONALIZAÇÃO</span><span class="update-tag">MENU</span></div>
         <p>Uma atualização focada em progressão, personalização e identidade visual, trazendo novos sistemas e uma nova apresentação para o ABYSSAL LEGACY.</p>
@@ -1911,7 +1928,8 @@ button:hover{transform:translateY(-1px);background:#202b48;border-color:#8298c9}
     <h2>ESCOLHA A DIFICULDADE</h2>
     <p class="sub">Cada nível muda o comportamento da run, não apenas os números.</p>
     <div class="difficulty-options">
-      <button class="difficulty-card" data-diff="NORMAL"><b>⚔️ NORMAL</b><span>Experiência padrão para aprender as dungeons.</span><small>Inimigos equilibrados • sem modificadores extras</small></button>
+      <button class="difficulty-card" data-diff="EASY"><b>🌱 FÁCIL</b><span>Uma experiência mais tranquila para aprender o jogo.</span><small>Inimigos mais lentos • menos vida • menos dano • projéteis mais lentos</small></button>
+      <button class="difficulty-card" data-diff="NORMAL"><b>⚔️ NORMAL</b><span>Experiência padrão para aprender as dungeons.</span><small>Inimigos equilibrados • velocidade base da run</small></button>
       <button class="difficulty-card" data-diff="HARD"><b>🔥 DIFÍCIL</b><span>Inimigos mais resistentes e agressivos.</span><small>+ inimigos • mais elites • projéteis mais frequentes</small></button>
       <button class="difficulty-card" data-diff="NIGHTMARE"><b>☠️ EXTREMO</b><span>Uma run muito mais intensa do começo ao fim.</span><small>Mais inimigos • elites • velocidade • pressão de combate</small></button>
       <button class="difficulty-card" data-diff="HELL"><b>💀 INFERNO</b><span>Para builds fortes e jogadores experientes.</span><small>Alta densidade • dano elevado • elites frequentes</small></button>
@@ -2305,6 +2323,115 @@ function debugSelectDungeon(index){
   debugLog("Dungeon selecionada: "+(index+1));
 }
 
+function debugSpawnEnemies(amount=5, selectedName=null){
+  if(!DEBUG_MODE)return;
+  if(typeof run==="undefined" || !run || !run.player){
+    toast("🐛 DEBUG: inicie uma partida primeiro!");
+    return;
+  }
+  if(typeof enemies==="undefined")return;
+
+  const diff=DIFF[difficulty];
+  const dung5Names=["Bosta Corredora","Torrão Fedorento","Esterco Saltitante","Bicho de Merda","Larva de Lodo","Bolota de Esterco"];
+  const bloodNames=["Hemófago","Parasita Carmesim","Verme Sanguíneo","Cultista de Sangue","Gota Viva","Carniceiro","Veia Rastejante"];
+  const ghostNames=["Espectro Errante","Alma Perdida","Banshee","Poltergeist","Ceifador Menor","Fantasma Sombrio","Wraith Carmesim"];
+  const bossNames=Array.from({length:13},(_,i)=>bossData(i).name);
+  const allNames=[...ENEMY_NAMES,...dung5Names,...bloodNames,...ghostNames,"Baú Inimigo",...bossNames];
+  const validName=selectedName&&allNames.includes(selectedName)?selectedName:null;
+  const count=Math.max(1,Math.min(20,Number(amount)||5));
+  const list=[];
+
+  function createExistingEnemy(nm){
+    if(nm==="Baú Inimigo"){
+      const mhp=(90+run.dungeon*25)*diff.hp;
+      return {
+        id:entityId(),x:rng.int(-420,420),y:rng.int(-270,270),r:24,
+        name:"Baú Inimigo",hp:mhp,maxHp:mhp,speed:55,
+        dmg:(10+run.dungeon*2)*diff.dmg,ranged:false,attack:.5,shoot:99,
+        status:{},elite:false,mods:[],dead:false,mimic:true
+      };
+    }
+
+    const dung5=dung5Names.includes(nm);
+    const bloodCreature=bloodNames.includes(nm);
+    const ghostCreature=ghostNames.includes(nm);
+    const poopRunner=dung5&&(nm==="Bosta Corredora"||nm==="Bicho de Merda");
+    const ranged=!dung5&&!bloodCreature&&!ghostCreature&&(
+      ["Arqueiro","Atirador","Mago","Canhão","Artilheiro","Bombardeiro"].includes(nm) ||
+      rng.next()<diff.ranged
+    );
+    const baseHp=(40+run.dungeon*20)*diff.hp;
+    const e={
+      id:entityId(),
+      x:rng.int(-520,520),y:rng.int(-330,330),
+      r:rng.int(11,18),name:nm,
+      hp:baseHp,maxHp:baseHp,
+      speed:(poopRunner?145:(ranged?65:85))+rng.int(0,45),
+      dmg:(7+run.dungeon*2)*diff.dmg,
+      ranged,attack:rng.next()*1.5,shoot:rng.next()*1.8,
+      status:{},elite:false,mods:[],dead:false,
+      poopRunner,poopFuse:poopRunner?(2.8+rng.next()*1.8):0,poopWarn:0,
+      bloodCreature,bloodDrain:0,bloodShotTimer:rng.next()*1.5,
+      ghostCreature,ghostPhase:rng.next()*Math.PI*2,
+      ghostShotTimer:rng.next()*1.8,ghostFade:rng.next()*2
+    };
+
+    if(dung5){
+      e.r+=poopRunner?3:2;
+      e.maxHp*=poopRunner?.85:1.12;
+      e.hp=e.maxHp;
+      e.dmg*=poopRunner?1.15:.9;
+    }
+
+    enemies.push(e);
+    return e;
+  }
+
+  for(let i=0;i<count;i++){
+    const nm=validName || (
+      run.dungeon===8 ? rng.pick(bloodNames) :
+      run.dungeon===9 ? rng.pick(ghostNames) :
+      run.dungeon===4 ? rng.pick(dung5Names) :
+      rng.pick(ENEMY_NAMES)
+    );
+
+    // Chefes usam exatamente a mesma construção do jogo.
+    if(bossNames.includes(nm)){
+      const bossIndex=bossNames.indexOf(nm);
+      const d=bossData(bossIndex);
+      const hp=d.hp*diff.hp;
+
+      if(bossIndex===2){
+        // A Trindade Cinzenta existe no jogo como 3 chefes simultâneos.
+        const groupId=entityId();
+        const positions=[[-190,-70],[190,-70],[0,-205]];
+        positions.forEach((pos,j)=>{
+          const b=makeBoss(d,hp*.5,pos[0],pos[1],{
+            name:"Trindade Cinzenta • "+(j+1),
+            groupId,groupIndex:j,r:50,
+            speed:d.speed+(j===2?8:0),
+            dmg:d.dmg*diff.dmg*(j===2?1.12:1)
+          });
+          enemies.push(b);list.push(b);
+        });
+      }else{
+        const b=makeBoss(d,hp);
+        enemies.push(b);list.push(b);
+      }
+    }else{
+      const e=createExistingEnemy(nm);
+      list.push(e);
+    }
+  }
+
+  burst(run.player.x,run.player.y,18,2.5);
+  const shown=validName||"ALEATÓRIOS";
+  toast("🐛 DEBUG: +"+list.length+" • "+shown+"!");
+  debugLog("Spawn real do jogo: "+list.length+" • "+shown);
+  if(list.some(e=>e.boss)){
+    showBossBars();
+  }
+}
 function debugShowPanel(){
   if(!DEBUG_MODE || debugPanelVisible) return;
   debugPanelVisible = true;
@@ -2321,6 +2448,15 @@ function debugShowPanel(){
     <button data-d="heal">❤️ Vida cheia [H]</button>
     <button data-d="plus">⚡ Desbloquear Plus [P]</button>
     <button data-d="weapons">🔫 Dar armas Plus [U]</button>
+    <div style="margin:8px 0 4px;font-weight:800">👾 Escolher inimigo para spawn</div>
+    <select id="debugEnemySelect" style="display:block;width:100%;box-sizing:border-box;margin:4px 0;padding:7px;background:#171725;color:#fff;border:1px solid #444;border-radius:6px">
+      <option value="">🎲 Aleatório</option>
+      ${[...new Set([...ENEMY_NAMES,"Bosta Corredora","Torrão Fedorento","Esterco Saltitante","Bicho de Merda","Larva de Lodo","Bolota de Esterco","Hemófago","Parasita Carmesim","Verme Sanguíneo","Cultista de Sangue","Gota Viva","Carniceiro","Veia Rastejante","Espectro Errante","Alma Perdida","Banshee","Poltergeist","Ceifador Menor","Fantasma Sombrio","Wraith Carmesim","Baú Inimigo",...Array.from({length:13},(_,i)=>bossData(i).name)])].map(n=>`<option value="${n}">${n}</option>`).join("")}
+    </select>
+    <select id="debugEnemyAmount" style="display:block;width:100%;box-sizing:border-box;margin:4px 0;padding:7px;background:#171725;color:#fff;border:1px solid #444;border-radius:6px">
+      <option value="1">1 inimigo</option><option value="5" selected>5 inimigos</option><option value="10">10 inimigos</option><option value="20">20 inimigos</option>
+    </select>
+    <button data-d="spawnEnemies">👾 Spawnar inimigo selecionado</button>
     <button data-d="midas">👑 Liberar Midas</button>
     <button data-d="dragao">🐉 Liberar Dragão</button><button data-d="apostador">🎰 Liberar Apostador</button><button data-d="cacador">🎯 Liberar Caçador</button>
     <button data-d="god">🔴 GOD ON/OFF [I]</button>
@@ -2363,6 +2499,11 @@ function debugShowPanel(){
       if(d==="heal")debugFullHeal();
       if(d==="plus")debugUnlockPlus();
       if(d==="weapons")debugAddWeapon();
+      if(d==="spawnEnemies"){
+        const sel=document.getElementById("debugEnemySelect");
+        const amt=document.getElementById("debugEnemyAmount");
+        debugSpawnEnemies(amt?Number(amt.value):5,sel&&sel.value?sel.value:null);
+      }
       if(d==="midas")debugUnlockMidas();
       if(d==="dragao")debugUnlockDragao();
       if(d==="apostador")debugUnlockApostador();
@@ -2643,6 +2784,7 @@ function checkAchievements(){let changed=false;for(const a of ACHIEVEMENTS){if(!
 function renderAchievements(){const box=document.getElementById("achievementList"),sum=document.getElementById("achievementSummary");if(!box)return;checkAchievements();const done=ACHIEVEMENTS.filter(a=>save.achievementState[a.id]).length;if(sum)sum.innerHTML=`<b style="color:#ffd76a;font-size:18px">🏆 ${done}/100</b> concluídas <span style="opacity:.7">•</span> 🟢 5 • 🔵 10 • 🟠 20 • 🔴 35 • 🟣 60 fragmentos`;box.innerHTML=ACHIEVEMENTS.map((a,i)=>{const ok=!!save.achievementState[a.id],tier=ACHIEVEMENT_TIERS[a.tier-1],icon=(a.name.match(/^\S+/)||["🏆"])[0];return `<div class="achievement-card ${ok?"done":""}"><div class="a-head"><div class="a-icon">${ok?"🏆":icon}</div><div class="a-main"><div class="a-title"><span>${ok?"Conquista concluída":"Desafio #"+(i+1)}</span><span class="a-diff">${tier.name}</span></div><div style="font-size:13px;font-weight:1000;margin-top:3px">${a.name.replace(/^\S+\s*/,"")}</div></div></div><div class="a-desc">${a.desc}</div><div class="a-reward">💠 +${a.reward} fragmentos</div><div class="a-bar"><i style="width:${ok?100:0}%"></i></div></div>`}).join("");}
 
 const DIFF={
+ EASY:{hp:.82,dmg:.80,speed:.88,elite:.035,count:-1,ranged:.18,attackRate:.88,projectile:.88,reward:.90,label:"Mais fácil • inimigos mais lentos e menos resistentes"},
  NORMAL:{hp:1.06,dmg:1.08,speed:1.03,elite:.07,count:0,ranged:.26,attackRate:1.04,projectile:1.04,reward:1,label:"Equilibrado • pressão aumentada"},
  HARD:{hp:1.38,dmg:1.34,speed:1.11,elite:.13,count:1,ranged:.34,attackRate:1.12,projectile:1.12,reward:1.12,label:"Mais inimigos • elites • pressão"},
  NIGHTMARE:{hp:1.72,dmg:1.62,speed:1.20,elite:.19,count:2,ranged:.41,attackRate:1.20,projectile:1.20,reward:1.25,label:"Alta densidade • agressividade"},
@@ -3076,7 +3218,7 @@ function createRun(){
     midasCoinDamageBonus:0,midasTransformRadiusBonus:0,
     combo:0,comboTime:0,invuln:0,
     dragonBloodColdTimer:0,dragonFrenzyTimer:0,dragonBoomerangFX:null,
-    luckBonus:0,luckBoostTimer:0,gamblerGoldBonus:0,casinoMachineTimer:0,casinoCooldown:0,casinoDebuffTimer:0,
+    luckBonus:0,luckBoostTimer:0,gamblerGoldBonus:0,casinoMachineTimer:0,casinoCooldown:0,casinoDebuffTimer:0,casinoSlowTimer:0,
     streak:0,streakTimer:0,bestStreak:0,frenzyTimer:0,
     roomDamageTaken:0,roomKills:0,chestPity:0,timedChallengeTimer:0,timedChallengeActive:false,questActive:false,questTarget:0,questKills:0,
     roomShield:false,revived:false,
@@ -3326,6 +3468,7 @@ function enterRoom(i){
 
 function spawnEnemies(elite=false){
   const diff=DIFF[difficulty];
+  run.combatTempo=1.00;
   const dung5=run.dungeon===4;
   const dung5Names=["Bosta Corredora","Torrão Fedorento","Esterco Saltitante","Bicho de Merda","Larva de Lodo","Bolota de Esterco"];
   let base=4+run.dungeon;
@@ -3365,7 +3508,6 @@ function spawnEnemies(elite=false){
     }
     enemies.push(e);
   }
-  if(!elite&&currentRoom?.type==="combat"&&rng.next()<.10){const mhp=(90+run.dungeon*25)*diff.hp;enemies.push({id:entityId(),x:rng.int(-420,420),y:rng.int(-270,270),r:24,name:"Baú Inimigo",hp:mhp,maxHp:mhp,speed:55,dmg:(10+run.dungeon*2)*diff.dmg,ranged:false,attack:.5,shoot:99,status:{},elite:false,mods:[],dead:false,mimic:true});}
 }
 
 function bossData(index){
@@ -3535,7 +3677,41 @@ function addGold(amount){
   run.gold=Math.max(0,Math.floor(Number(run.gold)||0)+value);
   return value;
 }
-function casinoRoll(source="machine"){if(!run||state!=="game"||run.casinoCooldown>0)return;const machineCost=100+(run.dungeon||0)*25;if(source==="machine"&&run.gold<machineCost){toast(`🎰 A MÁQUINA CUSTA ${machineCost} OURO • OURO INSUFICIENTE`);return;}if(source==="machine")addGold(-machineCost);run.casinoCooldown=1;run.casinoMachineTimer=.9;casinoFX={start:performance.now(),source,angle:Math.random()*Math.PI*2};const luck=Math.min(.35,(run.luckBonus||0)+(run.luckBoostTimer>0?.18:0));const roll=rng.next();save.achievementStats.casinoRolls=(save.achievementStats.casinoRolls||0)+1;run.casinoRollsInRun=(run.casinoRollsInRun||0)+1;let outcome;const good=Math.min(.88,.72+luck);if(roll<good){const r=rng.next();if(r<.26){const v=Math.floor((45+rng.int(0,90)+run.dungeon*12)*luckMultiplier());addGold(v);save.achievementStats.totalGold=(save.achievementStats.totalGold||0)+v;outcome=`🪙 +${v} OURO`;save.achievementStats.casinoWins++;}else if(r<.45){const heal=run.player.maxHp*(.25+.10*rng.next())*luckMultiplier();run.player.hp=Math.min(run.player.maxHp,run.player.hp+heal);outcome=`❤️ +${Math.ceil(heal)} HP`;save.achievementStats.casinoWins++;}else if(r<.68){const item=pickWeaponByRarity(run.weapon?.[0]);drops.push({x:run.player.x+30,y:run.player.y,r:22,type:"weapon",item,life:999});outcome=`🔫 ${item[0]}`;save.achievementStats.casinoWins++;}else if(r<.90){const item=pickRelic();if(item){drops.push({x:run.player.x-30,y:run.player.y,r:20,type:"relic",item,life:999});outcome=`💎 ${item[0]}`;save.achievementStats.casinoWins++;}else{addGold(50);outcome="🪙 +50 OURO";}}else{const f=Math.floor(5*luckMultiplier());save.fragments+=f;outcome=`💠 +${f} FRAGMENTOS`;save.achievementStats.casinoWins++;}}else{const bad=rng.int(0,2);if(bad===0){run.casinoDebuffTimer=7;run.player.speed*=.72;run.player.damage*=.82;outcome="☠️ AZAR • -28% velocidade e -18% dano por 7s";}else if(bad===1){run.player.hp=Math.max(1,run.player.hp-run.player.maxHp*.18);outcome="💔 AZAR • -18% HP";}else{run.abilityCooldown=Math.max(run.abilityCooldown,5);outcome="⛓️ AZAR • habilidade travada";}}if(save.achievementStats.casinoRolls>=10&&!save.unlockedClasses.includes("Apostador")){save.unlockedClasses.push("Apostador");toast("🎰 APOSTADOR DESBLOQUEADO!");buildChars();renderSkillTree();}persist();burst(run.player.x,run.player.y,28,3);playCasinoSound(outcome.includes("AZAR")?"bad":"win");toast("🎰 "+outcome);}
+function casinoRoll(source="machine"){
+  if(!run||state!=="game"||run.casinoCooldown>0)return;
+  const machineCost=100+(run.dungeon||0)*25;
+  if(source==="machine"&&run.gold<machineCost){toast(`🎰 A MÁQUINA CUSTA ${machineCost} OURO • OURO INSUFICIENTE`);return;}
+  if(source==="machine")addGold(-machineCost);
+  run.casinoCooldown=1;run.casinoMachineTimer=.9;
+  casinoFX={start:performance.now(),source,angle:Math.random()*Math.PI*2};
+  save.achievementStats.casinoRolls=(save.achievementStats.casinoRolls||0)+1;
+  run.casinoRollsInRun=(run.casinoRollsInRun||0)+1;
+
+  // As porcentagens solicitadas somam 101,1%. Mantemos todos os valores como pesos
+  // e normalizamos a roleta para que nenhum resultado seja removido.
+  const rewards=[
+    {w:10,run:()=>{run.player.maxHp=Math.max(1,run.player.maxHp*.5);run.player.hp=Math.min(run.player.hp,run.player.maxHp);return "💔 AZAR • -50% VIDA MÁXIMA";}},
+    {w:5,run:()=>{save.fragments=(Number(save.fragments)||0)+10;return "💠 +10 FRAGMENTOS";}},
+    {w:5,run:()=>{const before=run.level;gainXP(run.xpNext);return `⬆️ +1 LEVEL UP • Nv ${run.level}`;}},
+    {w:1,run:()=>{save.fragments=(Number(save.fragments)||0)+1000;return "💠 +1.000 FRAGMENTOS";}},
+    {w:.1,run:()=>{run.player.damage+=100;return "⚔️ +100 DANO";}},
+    {w:10,run:()=>{if((run.casinoSlowTimer||0)<=0)run.player.speed*=.5;run.casinoSlowTimer=60;return "🐌 LENTO • 1 MINUTO";}},
+    {w:20,run:()=>{addGold(1000);save.achievementStats.totalGold=(save.achievementStats.totalGold||0)+1000;return "🪙 +1.000 MOEDAS";}},
+    {w:10,run:()=>{run.player.damage=Math.max(.01,run.player.damage*.5);return "💥 -50% DANO";}},
+    {w:35,run:()=>{addGold(1);save.achievementStats.totalGold=(save.achievementStats.totalGold||0)+1;return "🪙 +1 MOEDA";}},
+    {w:5,run:()=>{drops.push({x:run.player.x,y:run.player.y,r:11,type:"midasCoin",life:999});return "👑 +1 MOEDA DO MIDAS";}}
+  ];
+  const total=rewards.reduce((sum,r)=>sum+r.w,0);
+  let pick=rng.next()*total,chosen=rewards[rewards.length-1];
+  for(const r of rewards){pick-=r.w;if(pick<0){chosen=r;break;}}
+  const outcome=chosen.run();
+  if(!outcome.includes("AZAR") && !outcome.includes("LENTO") && !outcome.includes("-50% DANO")){save.achievementStats.casinoWins=(save.achievementStats.casinoWins||0)+1;}
+  persist();
+  burst(run.player.x,run.player.y,28,3);
+  playCasinoSound(outcome.includes("AZAR")||outcome.includes("LENTO")||outcome.includes("-50% DANO")?"bad":"win");
+  toast("🎰 "+outcome);
+}
+
 function acceptQuest(){
   if(!currentRoom||currentRoom.type!=="quest"||currentRoom.questAccepted)return;
   currentRoom.questAccepted=true;currentRoom.cleared=false;run.questActive=true;run.questTarget=currentRoom.questTarget;run.questKills=0;
@@ -4209,6 +4385,13 @@ function hitEnemy(e,b){
   if(run.weapon?.[5]==="Vampire")p.hp=Math.min(p.maxHp,p.hp+d*.10);
 
   e.hp-=d;
+
+  if(e.boss&&!e.dead){
+    e.bossRageTimer=Math.min(1.5,(e.bossRageTimer||0)+.18);
+    e.attack=Math.min(e.attack,.22);
+    e.shoot=Math.min(e.shoot,.38);
+    e.summon=Math.min(e.summon||1.2,.85);
+  }
   if(run.relics.some(r=>r[2]==="instability")&&b.owner==="player"){
     run.instabilityHits=(run.instabilityHits||0)+1;
     if(run.instabilityHits>=10){run.instabilityHits=0;run.instabilityCharged=true;toast("💎 INSTABILIDADE CARREGADA!");}
@@ -4745,6 +4928,12 @@ function update(dt){
   if(relicInventoryOpen)return;
   if(state!=="game")return;
 
+  // MODO TURBO: toda a simulação da partida roda 50% mais rápido.
+  // O multiplicador é aplicado uma única vez no delta-time para não
+  // acumular com os antigos bônus de 10% de ritmo.
+  const TURBO_SPEED=1.5;
+  dt*=TURBO_SPEED;
+
   // Proteção contra estado "game" sem uma run válida.
   // Evita: TypeError: Cannot read properties of null (reading 'time')
   // Isso pode acontecer quando um painel/controle muda o estado enquanto
@@ -4805,7 +4994,7 @@ function update(dt){
   run.dashCooldown=Math.max(0,run.dashCooldown-dt);
   run.abilityCooldown=Math.max(0,run.abilityCooldown-dt);
   run.secondAbilityCooldown=Math.max(0,(run.secondAbilityCooldown||0)-dt);
-  run.casinoCooldown=Math.max(0,(run.casinoCooldown||0)-dt);run.casinoMachineTimer=Math.max(0,(run.casinoMachineTimer||0)-dt);run.luckBoostTimer=Math.max(0,(run.luckBoostTimer||0)-dt);if(run.casinoDebuffTimer>0){run.casinoDebuffTimer-=dt;if(run.casinoDebuffTimer<=0){run.player.speed/=.72;run.player.damage/=.82;}}
+  run.casinoCooldown=Math.max(0,(run.casinoCooldown||0)-dt);run.casinoMachineTimer=Math.max(0,(run.casinoMachineTimer||0)-dt);run.luckBoostTimer=Math.max(0,(run.luckBoostTimer||0)-dt);if(run.casinoDebuffTimer>0){run.casinoDebuffTimer-=dt;if(run.casinoDebuffTimer<=0){run.player.speed/=.72;run.player.damage/=.82;}}if((run.casinoSlowTimer||0)>0){run.casinoSlowTimer-=dt;if(run.casinoSlowTimer<=0){run.player.speed/=.5;}}
   if(run.character==="Midas" && run.midasAbilityActive){
     run.midasAbilityTimer=Math.max(0,(run.midasAbilityTimer||0)-dt);
     if(run.midasAbilityTimer<=0){
@@ -5116,7 +5305,7 @@ function update(dt){
     const a=Math.atan2(p.y-e.y,p.x-e.x);
     const d=dist(e,p);
     if(!e.status)e.status={};if(e.hunterNetTimer>0){e.hunterNetTimer-=dt;if(e._hunterDotTick!==undefined){e._hunterDotTick-=dt;if(e._hunterDotTick<=0){e._hunterDotTick=1;if(!e.dead)hitEnemy(e,{dmg:e._hunterDot||2,type:"None",owner:"player",pierce:0});}}e.status.Root=e.hunterNetTimer;}const slowed=(e.status.Ice||e.status.Slow)?0.55:(e.hunterNetTimer>0||e.status.Root>0)?0:1;
-    const paralyzed=e.status.Shock>0||e.status.Freeze>0;
+    const paralyzed=!e.boss&&(e.status.Shock>0||e.status.Freeze>0);
 
     if(e.status.Suction>0){
       const sx=Math.atan2(e.y-e.status.SuctionY,e.x-e.status.SuctionX);
@@ -5124,9 +5313,11 @@ function update(dt){
       e.y-=Math.sin(sx)*115*dt;
     }
 
-    e.attack-=dt*diff.attackRate;e.shoot-=dt*diff.projectile;e.summon=(e.summon||8)-dt*diff.attackRate;
+    const combatTempo=run.combatTempo||1;
+      e.attack-=dt*diff.attackRate*combatTempo;e.shoot-=dt*diff.projectile*combatTempo;e.summon=(e.summon||8)-dt*diff.attackRate*combatTempo;
 
     if(e.boss){
+      if(e.bossRageTimer>0)e.bossRageTimer=Math.max(0,e.bossRageTimer-dt);
       const ratio=e.hp/e.maxHp;
       const newPhase=ratio<=1/3?3:ratio<=2/3?2:1;
       if(newPhase!==e.phase){
@@ -5139,16 +5330,16 @@ function update(dt){
       }
 
       if(!paralyzed&&d>105){
-        e.x+=Math.cos(a)*e.speed*.30*slow*(1+(e.phase-1)*.08)*dt;
-        e.y+=Math.sin(a)*e.speed*.30*slow*(1+(e.phase-1)*.08)*dt;
+        e.x+=Math.cos(a)*e.speed*.33*slow*(1+(e.phase-1)*.08)*dt;
+        e.y+=Math.sin(a)*e.speed*.33*slow*(1+(e.phase-1)*.08)*dt;
       }else if(!paralyzed&&d<65){
-        e.x-=Math.cos(a)*e.speed*.18*slow*dt;
-        e.y-=Math.sin(a)*e.speed*.18*slow*dt;
+        e.x-=Math.cos(a)*e.speed*.20*slow*dt;
+        e.y-=Math.sin(a)*e.speed*.20*slow*dt;
       }
 
       if(!paralyzed&&e.attack<=0&&d<90){
         hurt(e,e.dmg*(e.dmgMultiplier||1));
-        e.attack=1.15;
+        e.attack=.92;
       }
 
       if(e.lightningTimer>0){
@@ -5332,8 +5523,22 @@ function update(dt){
       c.opening=Math.max(0,c.opening-dt);
       if(c.opening===0&&!c.rewardSpawned){
         c.rewardSpawned=true;
-        spawnChestReward(c);
-        toast(c.type==="goldChest"?"🟡 BAÚ DE OURO ABERTO! MOEDAS ESPALHADAS":"🟤 BAÚ MARROM ABERTO! ITENS ESPALHADOS");
+        // Ao abrir um baú existe uma chance de ele revelar um Mimico Elite.
+        // O baú explode em fumaça e o inimigo nasce exatamente no lugar do baú.
+        if(rng.next()<.15){
+          c.hidden=true;
+          burst(c.x,c.y,42,5);
+          for(let s=0;s<12;s++){
+            const a=rng.next()*Math.PI*2,d=rnd(8,55);
+            particles.push({x:c.x+Math.cos(a)*d,y:c.y+Math.sin(a)*d,vx:Math.cos(a)*rnd(25,90),vy:Math.sin(a)*rnd(25,90),life:rnd(.45,1.1),max:1,r:rnd(3,8),type:"smoke"});
+          }
+          const mhp=(110+run.dungeon*28)*DIFF[difficulty].hp;
+          enemies.push({id:entityId(),x:c.x,y:c.y,r:27,name:"Baú Mimico Elite",hp:mhp,maxHp:mhp,speed:72*DIFF[difficulty].speed,dmg:(15+run.dungeon*2.5)*DIFF[difficulty].dmg,ranged:false,attack:.4,shoot:99,status:{},elite:true,mods:[],dead:false,mimic:true,mimicOpen:true});
+          shake=10;toast("📦💀 MÍMICO ELITE! O BAÚ ERA UMA ARMADILHA!");
+        }else{
+          spawnChestReward(c);
+          toast(c.type==="goldChest"?"🟡 BAÚ DE OURO ABERTO! MOEDAS ESPALHADAS":"🟤 BAÚ MARROM ABERTO! ITENS ESPALHADOS");
+        }
       }
     }
   }
@@ -6176,6 +6381,21 @@ function drawBossLaserWarning(e){
 function drawEnemy(e){
   X.save();
   X.translate(e.x,e.y);
+
+  if(e.mimic && !e.ally){
+    const pulse=.92+.08*Math.sin(performance.now()*.014);
+    const open=e.mimicOpen!==false;
+    X.shadowBlur=28;X.shadowColor="#ff3f4f";
+    X.fillStyle="#71391f";X.strokeStyle="#ff6875";X.lineWidth=3;
+    X.beginPath();X.roundRect(-34,-2,68,38,8);X.fill();X.stroke();
+    X.fillStyle="#a85d2b";X.beginPath();X.roundRect(-34,-25-(open?8:0),68,25,7);X.fill();X.stroke();
+    X.fillStyle="#ffd76a";X.fillRect(-5,8,10,12);
+    X.fillStyle="#ff4f5f";X.beginPath();X.arc(-15,-12,4*pulse,0,Math.PI*2);X.arc(15,-12,4*pulse,0,Math.PI*2);X.fill();
+    X.fillStyle="#fff";X.font="1000 11px system-ui";X.textAlign="center";X.fillText("MÍMICO ELITE",0,-45);
+    X.shadowBlur=0;X.restore();
+    if(!e.ally){X.fillStyle="#120d17";X.fillRect(e.x-e.r,e.y-e.r-12,e.r*2,5);X.fillStyle="#ff5d6c";X.fillRect(e.x-e.r,e.y-e.r-12,e.r*2*clamp(e.hp/e.maxHp,0,1),5);}
+    return;
+  }
 
   if(e.hypnotized){
     const pulse=.9+.15*Math.sin(performance.now()*.015);
